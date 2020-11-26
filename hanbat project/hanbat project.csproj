@@ -52,15 +52,94 @@
     <Compile Include="Class\HttpWebRequestClass.cs" />
     <Compile Include="Class\Option.cs" />
     <Compile Include="Class\Selenium.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="CustomClass\CustomButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomClass\CustomButton.Designer.cs">
+      <DependentUpon>CustomButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomClass\CustomCheckbox.cs" />
+    <Compile Include="CustomClass\CustomCheckbox.designer.cs">
+      <DependentUpon>CustomCheckbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomClass\CustomComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomClass\CustomComboBox.designer.cs">
+      <DependentUpon>CustomComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomClass\CustomContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomClass\CustomContainer.designer.cs">
+      <DependentUpon>CustomContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomClass\customFrame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomClass\customFrame.designer.cs">
+      <DependentUpon>customFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomClass\CustomListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomClass\CustomListView.designer.cs">
+      <DependentUpon>CustomListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomClass\CustomPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomClass\CustomPanel.designer.cs">
+      <DependentUpon>CustomPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomClass\CustomRichTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomClass\CustomRichTextBox.designer.cs">
+      <DependentUpon>CustomRichTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomClass\CustomTextbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomClass\CustomTextbox.designer.cs">
+      <DependentUpon>CustomTextbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="CustomClass\CustomButton.resx">
+      <DependentUpon>CustomButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomClass\CustomCheckbox.resx">
+      <DependentUpon>CustomCheckbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomClass\CustomComboBox.resx">
+      <DependentUpon>CustomComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomClass\CustomContainer.resx">
+      <DependentUpon>CustomContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomClass\customFrame.resx">
+      <DependentUpon>customFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomClass\CustomListView.resx">
+      <DependentUpon>CustomListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomClass\CustomPanel.resx">
+      <DependentUpon>CustomPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomClass\CustomRichTextBox.resx">
+      <DependentUpon>CustomRichTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomClass\CustomTextbox.resx">
+      <DependentUpon>CustomTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
