@@ -71,7 +71,6 @@ namespace hanbat_project.Class
 
         public void gotoUrl()
         {
-
             String html;
 
             Uri _uri = new Uri("http://cyber.hanbat.ac.kr/Main.do?cmd=viewHome");
