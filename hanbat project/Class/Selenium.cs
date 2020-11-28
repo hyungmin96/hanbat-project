@@ -20,10 +20,10 @@ namespace hanbat_project.Class
         public IWebDriver driver;
         private ChromeDriverService driverS;
         private ChromeOptions driver0;
-        Main main;
+        object main;
 
         #region [ Construct ]
-        public Selenium(Main main)
+        public Selenium(object main)
         {
             this.main = main;
         }
