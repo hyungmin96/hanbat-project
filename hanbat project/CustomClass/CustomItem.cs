@@ -12,9 +12,9 @@ namespace hanbat_project.CustomClass
         }
 
         String  ClassName, uri, curTime, endTime;
-        int progress;
+        double progress;
 
-        public CustomItem(String uri, String ClassName, String curTime, String endTime, int progress)
+        public CustomItem(String uri, String ClassName, String curTime, String endTime, double progress)
         {
             this.uri = uri;
             this.ClassName = ClassName;
@@ -56,10 +56,10 @@ namespace hanbat_project.CustomClass
             set { endTime = value; }
         }
 
-        public int _progress
+        public double _progress
         {
             get { return progress; }
-            set { progress = value; progressBar1.Value = value; }
+            set { progress = value; progressBar1.Value = (int)value; }
         }
 
     }

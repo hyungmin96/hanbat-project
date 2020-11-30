@@ -35,6 +35,7 @@ namespace hanbat_project
         private void Main_Load(object sender, EventArgs e)
         {
             http.getClasses(this);
+            flowLayoutPanel1.Margin = new Padding(0,0,0,0);
         }
 
         #endregion
@@ -97,11 +98,6 @@ namespace hanbat_project
 
             ListViewItem _item = new ListViewItem(_vaules);
             customlistview.Items.Add(_item);
-
-            if (customlistview.Items.Count % 2 == 0)
-                customlistview.Items[customlistview.Items.Count - 1].BackColor = Color.FromArgb(29, 30, 31);
-            else
-                customlistview.Items[customlistview.Items.Count - 1].BackColor = Color.FromArgb(34, 36, 38);
 
             if (customlistview.Items.Count * 35 >= customlistview.Height) customlistview.Columns[customlistview.Columns.Count - 1].Width = 0;
 

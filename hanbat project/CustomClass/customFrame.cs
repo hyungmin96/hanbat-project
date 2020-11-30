@@ -16,8 +16,47 @@ namespace WindowsFormsApp2.CustomControl
     public partial class customFrame : UserControl
     {
 
-        private String Name;
+        private String title, subject;
+        private Color titleColor;
+        private Color subjectColor;
+        private Image img;
+        private bool usePnl;
 
+        public bool _usePnl
+        {
+            set { usePnl = value; if (usePnl) panel8.Dispose(); }
+            get { return usePnl; }
+        }
+
+        public Image _setImg
+        {
+            set { img = value; pictureBox1.Image = img; }
+            get { return img; }
+        }
+
+        public String _title
+        {
+            set { title = value; label1.Text = value; }
+            get { return title; }
+        }
+
+        public String _subject
+        {
+            set { subject = value; label2.Text = value; }
+            get { return subject; }
+        }
+
+        public Color _subject1Color
+        {
+            get { return titleColor;  }
+            set { titleColor = value; panel8.BackColor = titleColor; }
+        }
+        public Color _subject2Color
+        {
+            get { return subjectColor;  }
+            set { subjectColor = value; this.BackColor = subjectColor; }
+        }
+    
         public String FrameName
         {
             get { return Name;  }
@@ -32,7 +71,9 @@ namespace WindowsFormsApp2.CustomControl
 
         private void customFrame_Load(object sender, EventArgs e)
         {
-            panel2.SendToBack();
+            panel8.SendToBack();
+            panel10.SendToBack();
+            panel9.SendToBack();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

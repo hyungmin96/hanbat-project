@@ -169,16 +169,23 @@ namespace hanbat_project.Class
                                 _endTime = "1";
                             }
 
-                            int _progressedVal = (getTime(_curTime) / getTime(_endTime) * 100);
+                            if (_curTime == "") _curTime = "1";
+
+                            var a = (double)(getTime(_curTime));
+                            var b = (double)(getTime(_endTime));
+
+                            double _progressedVal = double.Parse(String.Format("{0:0.#}", (a / b) * 100));
 
                             CustomItem _item = new CustomItem();
+
                             _item._uri = _Uri;
                             _item._ClassName = _name;
                             _item._curTime = _curTime;
                             _item._endTime = _endTime;
-                            _item._progress = (_progressedVal > 100) ? 100 : _progressedVal;
+                            _item._progress = (_progressedVal >= 100) ? 100 : _progressedVal;
 
                             _lst.Add(_item);
+
                         }
                     }
 
