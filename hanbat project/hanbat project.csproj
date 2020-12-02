@@ -72,6 +72,7 @@
     <Compile Include="Class\HttpWebRequestClass.cs" />
     <Compile Include="Class\Option.cs" />
     <Compile Include="Class\Selenium.cs" />
+    <Compile Include="Class\Singleton.cs" />
     <Compile Include="CustomClass\CustomButton.cs">
       <SubType>UserControl</SubType>
     </Compile>

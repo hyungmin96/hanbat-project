@@ -82,7 +82,7 @@ namespace hanbat_project
         private void button2_Click(object sender, EventArgs e)
         {
 
-            HttpWebRequestClass http = new HttpWebRequestClass(this);
+            HttpWebRequestClass http = new HttpWebRequestClass();
 
             if (http.Login(customTextbox1.val, customTextbox2.val))
             {

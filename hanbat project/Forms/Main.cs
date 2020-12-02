@@ -118,7 +118,9 @@ namespace hanbat_project
         #endregion
 
         Dictionary<String, List<CustomItem>> _dict = new Dictionary<string, List<CustomItem>>();
+
         int currentPage = 0;
+
         private void customListView2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
 
@@ -197,6 +199,18 @@ namespace hanbat_project
 
         }
 
+        private void button13_Click_1(object sender, EventArgs e)
+        {
+            exitChrome();
+            Environment.Exit(Environment.ExitCode);
+        }
+
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
     }
+
 }
 

@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
@@ -17,26 +13,23 @@ namespace hanbat_project.Class
     public class Selenium
     {
 
-        public IWebDriver driver;
+        public IWebDriver driver = null;
         private ChromeDriverService driverS;
         private ChromeOptions driver0;
-        object main;
 
-        #region [ Construct ]
-        public Selenium(object main)
-        {
-            this.main = main;
-        }
+        #region [ Constructor ]
+
+        public Selenium() { }
 
         #endregion
 
-        #region [ open Chrome ]
+        #region [ take a class ]
 
         public void openChrome(String _url, String _cookie)
         {
-            do
-            {
 
+            if (driver == null || driver.WindowHandles.Count < 0)
+            {
                 driverS = ChromeDriverService.CreateDefaultService();
                 driverS.HideCommandPromptWindow = true;
                 driver0 = new ChromeOptions();
@@ -49,36 +42,21 @@ namespace hanbat_project.Class
                 driver0.AddArguments("--window-size=1000,1000");
                 driver0.AddArguments("--user-data-dir=C:\\Users\\" + GetUserName() + "\\AppData\\Local\\Google\\Chrome\\User Data\\");
                 driver = new ChromeDriver(driverS, driver0);
+            }
 
-                driver.Navigate().GoToUrl("http://cyber.hanbat.ac.kr/Course.do?cmd=viewStudyHome&courseDTO.courseId=H020382002003200502513011&boardInfoDTO.boardInfoGubun=study_home&gubun=study_course");
+            waitNavigate("http://cyber.hanbat.ac.kr/MLesson.do?cmd=viewStudyContentsForm&studyRecordDTO.lessonElementId=" + _url + "&courseDTO.courseId=urlvalue");
+           
+            driver.Manage().Cookies.AddCookie(new OpenQA.Selenium.Cookie("RSN_JSESSIONID", Regex.Split(Regex.Split(_cookie, "RSN_JSESSIONID=")[1], ";")[0]));
 
-                driver.Manage().Cookies.AddCookie(new OpenQA.Selenium.Cookie("RSN_JSESSIONID", Regex.Split(_cookie, "RSN_JSESSIONID=")[1]));
+            driver.Navigate().Refresh();
 
-                driver.Navigate().Refresh();
+            driver.SwitchTo().Frame("bodyFrame");
 
-                driver.SwitchTo().Window(driver.WindowHandles.First());
+            Actions action = new Actions(driver);
 
-                DelayOp.Delay(2500);
+            IWebElement playbtn = driver.FindElement(By.XPath("//*[@id=\"movie_player\"]/div[4]/div"));
 
-                driver.FindElement(By.XPath("//*[@id=\"listBox\"]/table/tbody/tr[3]/td[2]/div[1]/ul[2]/li[2]/a[2]")).Click();
-
-                DelayOp.Delay(2500);
-
-                driver.SwitchTo().Window(driver.WindowHandles.Last());
-
-                DelayOp.Delay(2500);
-
-                driver.SwitchTo().Frame("bodyFrame");
-
-                Actions action = new Actions(driver);
-
-                IWebElement playbtn = driver.FindElement(By.XPath("//*[@id=\"movie_player\"]/div[4]/div"));
-
-                action.MoveToElement(playbtn).Click(playbtn).Perform();
-
-                break;
-
-            } while (true);
+            action.MoveToElement(playbtn).Click(playbtn).Perform();
 
         }
 
@@ -151,4 +129,5 @@ namespace hanbat_project.Class
         #endregion
 
     }
+
 }

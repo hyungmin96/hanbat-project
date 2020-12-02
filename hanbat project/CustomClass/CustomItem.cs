@@ -1,4 +1,5 @@
-﻿using System;
+﻿using hanbat_project.Class;
+using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -6,8 +7,12 @@ namespace hanbat_project.CustomClass
 {
     public partial class CustomItem : UserControl
     {
-        public CustomItem()
+
+        String _cookie;
+
+        public CustomItem(String _cookie)
         {
+            this._cookie = _cookie;
             InitializeComponent();
         }
 
@@ -44,6 +49,11 @@ namespace hanbat_project.CustomClass
             set { ClassName = value; classLbl.Text = value; }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Singleton.getInstance().openChrome(uri, _cookie);
+        }
+
         public String _curTime
         {
             get { return curTime; }
@@ -63,4 +73,5 @@ namespace hanbat_project.CustomClass
         }
 
     }
+
 }

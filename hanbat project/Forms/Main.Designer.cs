@@ -55,6 +55,16 @@
             this.button14 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.homePnl = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.customFrame3 = new WindowsFormsApp2.CustomControl.customFrame();
             this.customFrame1 = new WindowsFormsApp2.CustomControl.customFrame();
             this.button1 = new System.Windows.Forms.Button();
@@ -69,20 +79,12 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.customFrame2 = new WindowsFormsApp2.CustomControl.customFrame();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.customListView2 = new ExtendedControls.CustomListView();
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -91,25 +93,11 @@
             this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.homePnl.SuspendLayout();
+            this.panel20.SuspendLayout();
             this.customFrame1.SuspendLayout();
             this.customFrame2.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel20.SuspendLayout();
             this.SuspendLayout();
             // 
             // columnHeader2
@@ -237,13 +225,14 @@
             this.button13.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button13.ForeColor = System.Drawing.Color.DarkGray;
             this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(971, 6);
+            this.button13.Location = new System.Drawing.Point(990, 6);
             this.button13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(35, 27);
             this.button13.TabIndex = 10494;
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click_1);
             // 
             // button14
             // 
@@ -255,23 +244,24 @@
             this.button14.ForeColor = System.Drawing.Color.DarkGray;
             this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
             this.button14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button14.Location = new System.Drawing.Point(939, 7);
+            this.button14.Location = new System.Drawing.Point(958, 7);
             this.button14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(35, 27);
             this.button14.TabIndex = 10493;
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("페이북 Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(7, 12);
+            this.label1.Location = new System.Drawing.Point(10, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 17);
+            this.label1.Size = new System.Drawing.Size(172, 19);
             this.label1.TabIndex = 10491;
             this.label1.Text = "한밭대 수업관리 프로그램";
             // 
@@ -287,11 +277,103 @@
             this.homePnl.Controls.Add(this.panel6);
             this.homePnl.Controls.Add(this.panel5);
             this.homePnl.Controls.Add(this.panel20);
-            this.homePnl.Location = new System.Drawing.Point(-1, 40);
+            this.homePnl.Location = new System.Drawing.Point(-1, 41);
             this.homePnl.MinimumSize = new System.Drawing.Size(0, 50);
             this.homePnl.Name = "homePnl";
-            this.homePnl.Size = new System.Drawing.Size(1010, 742);
+            this.homePnl.Size = new System.Drawing.Size(1029, 760);
             this.homePnl.TabIndex = 10496;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(31)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(1, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1028, 3);
+            this.panel6.TabIndex = 10501;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(1, 759);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1028, 1);
+            this.panel5.TabIndex = 10500;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel20.Controls.Add(this.panel21);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(1, 760);
+            this.panel20.TabIndex = 10491;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel21.Location = new System.Drawing.Point(0, 0);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(1, 2);
+            this.panel21.TabIndex = 10300;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(1026, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 834);
+            this.panel4.TabIndex = 10497;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1, 834);
+            this.panel1.TabIndex = 10498;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(1, 833);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1025, 1);
+            this.panel2.TabIndex = 10499;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(1, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1025, 1);
+            this.panel3.TabIndex = 10500;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel7.Location = new System.Drawing.Point(195, 9);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(2, 22);
+            this.panel7.TabIndex = 10501;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label2.Location = new System.Drawing.Point(207, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(187, 15);
+            this.label2.TabIndex = 10502;
+            this.label2.Text = "20187097(변형민) 님 안녕하세요";
             // 
             // customFrame3
             // 
@@ -303,7 +385,7 @@
             this.customFrame3._usePnl = true;
             this.customFrame3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
             this.customFrame3.FrameName = "customFrame";
-            this.customFrame3.Location = new System.Drawing.Point(34, 609);
+            this.customFrame3.Location = new System.Drawing.Point(34, 615);
             this.customFrame3.Name = "customFrame3";
             this.customFrame3.Size = new System.Drawing.Size(479, 118);
             this.customFrame3.TabIndex = 10510;
@@ -329,7 +411,7 @@
             this.customFrame1.Controls.Add(this.label13);
             this.customFrame1.Controls.Add(this.label14);
             this.customFrame1.FrameName = "customFrame";
-            this.customFrame1.Location = new System.Drawing.Point(560, 24);
+            this.customFrame1.Location = new System.Drawing.Point(576, 24);
             this.customFrame1.Name = "customFrame1";
             this.customFrame1.Size = new System.Drawing.Size(416, 572);
             this.customFrame1.TabIndex = 10509;
@@ -369,7 +451,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 135);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(415, 434);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(414, 434);
             this.flowLayoutPanel1.TabIndex = 10504;
             // 
             // label17
@@ -478,17 +560,13 @@
             // customFrame2
             // 
             this.customFrame2._setImg = ((System.Drawing.Image)(resources.GetObject("customFrame2._setImg")));
-            this.customFrame2._subject = "로그인한 계정이 수강중인 과목들을 보여줍니다.";
+            this.customFrame2._subject = "로그인한 계정의 수강중인 과목들을 보여줍니다.";
             this.customFrame2._subject1Color = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(43)))));
             this.customFrame2._subject2Color = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
             this.customFrame2._title = "수강중인 과목 목록";
             this.customFrame2._usePnl = false;
             this.customFrame2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
-            this.customFrame2.Controls.Add(this.panel15);
-            this.customFrame2.Controls.Add(this.panel12);
-            this.customFrame2.Controls.Add(this.panel10);
             this.customFrame2.Controls.Add(this.panel8);
-            this.customFrame2.Controls.Add(this.panel17);
             this.customFrame2.Controls.Add(this.customListView2);
             this.customFrame2.FrameName = "customFrame";
             this.customFrame2.Location = new System.Drawing.Point(34, 24);
@@ -496,143 +574,71 @@
             this.customFrame2.Size = new System.Drawing.Size(479, 572);
             this.customFrame2.TabIndex = 10508;
             // 
-            // panel15
+            // panel8
             // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
-            this.panel15.Controls.Add(this.panel16);
-            this.panel15.Controls.Add(this.label9);
-            this.panel15.Location = new System.Drawing.Point(160, 59);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(84, 32);
-            this.panel15.TabIndex = 10422;
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(44)))), ((int)(((byte)(45)))));
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(0, 31);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(84, 1);
-            this.panel16.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(11, 7);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 15);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "담당 교수님";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
-            this.panel12.Controls.Add(this.panel18);
-            this.panel12.Controls.Add(this.label4);
-            this.panel12.Location = new System.Drawing.Point(65, 59);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(95, 32);
-            this.panel12.TabIndex = 10422;
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(44)))), ((int)(((byte)(45)))));
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel18.Location = new System.Drawing.Point(0, 31);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(95, 1);
-            this.panel18.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(28, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "강의실";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
-            this.panel10.Controls.Add(this.panel11);
-            this.panel10.Controls.Add(this.label3);
-            this.panel10.Location = new System.Drawing.Point(244, 59);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(217, 32);
-            this.panel10.TabIndex = 10423;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(44)))), ((int)(((byte)(45)))));
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(0, 31);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(217, 1);
-            this.panel11.TabIndex = 1;
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
+            this.panel8.Controls.Add(this.label3);
+            this.panel8.Controls.Add(this.label9);
+            this.panel8.Controls.Add(this.label4);
+            this.panel8.Controls.Add(this.label10);
+            this.panel8.Controls.Add(this.panel13);
+            this.panel8.Location = new System.Drawing.Point(0, 59);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(477, 32);
+            this.panel8.TabIndex = 10423;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(69, 7);
+            this.label3.Location = new System.Drawing.Point(323, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 15);
-            this.label3.TabIndex = 0;
+            this.label3.TabIndex = 10295;
             this.label3.Text = "개설강좌 이름";
             // 
-            // panel8
+            // label9
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
-            this.panel8.Controls.Add(this.panel13);
-            this.panel8.Location = new System.Drawing.Point(461, 59);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(16, 32);
-            this.panel8.TabIndex = 10423;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(166, 8);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 15);
+            this.label9.TabIndex = 10296;
+            this.label9.Text = "담당 교수님";
             // 
-            // panel13
+            // label4
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(44)))), ((int)(((byte)(45)))));
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(0, 31);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(16, 1);
-            this.panel13.TabIndex = 10294;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
-            this.panel17.Controls.Add(this.panel19);
-            this.panel17.Controls.Add(this.label10);
-            this.panel17.Location = new System.Drawing.Point(2, 59);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(67, 32);
-            this.panel17.TabIndex = 10421;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(44)))), ((int)(((byte)(45)))));
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel19.Location = new System.Drawing.Point(0, 31);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(67, 1);
-            this.panel19.TabIndex = 2;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(93, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 15);
+            this.label4.TabIndex = 10297;
+            this.label4.Text = "강의실";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(17, 7);
+            this.label10.Location = new System.Drawing.Point(15, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(29, 15);
-            this.label10.TabIndex = 0;
+            this.label10.TabIndex = 10298;
             this.label10.Text = "번호";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel13.Location = new System.Drawing.Point(0, 31);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(477, 1);
+            this.panel13.TabIndex = 10294;
             // 
             // customListView2
             // 
@@ -655,7 +661,7 @@
             this.customListView2.Location = new System.Drawing.Point(0, 85);
             this.customListView2.Name = "customListView2";
             this.customListView2.RowHeight = 45;
-            this.customListView2.Size = new System.Drawing.Size(478, 484);
+            this.customListView2.Size = new System.Drawing.Size(477, 484);
             this.customListView2.TabIndex = 10512;
             this.customListView2.UseCompatibleStateImageBehavior = false;
             this.customListView2.View = System.Windows.Forms.View.Details;
@@ -699,104 +705,12 @@
             // 
             this.columnHeader31.Width = 17;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(1, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1009, 1);
-            this.panel6.TabIndex = 10501;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(1, 741);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1009, 1);
-            this.panel5.TabIndex = 10500;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel20.Controls.Add(this.panel21);
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1, 742);
-            this.panel20.TabIndex = 10491;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel21.Location = new System.Drawing.Point(0, 0);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(1, 2);
-            this.panel21.TabIndex = 10300;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1007, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 815);
-            this.panel4.TabIndex = 10497;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 815);
-            this.panel1.TabIndex = 10498;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(1, 814);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1006, 1);
-            this.panel2.TabIndex = 10499;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(1, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1006, 1);
-            this.panel3.TabIndex = 10500;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel7.Location = new System.Drawing.Point(197, 10);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(2, 22);
-            this.panel7.TabIndex = 10501;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(205, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 15);
-            this.label2.TabIndex = 10502;
-            this.label2.Text = "20187097(변형민) 님 안녕하세요";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(1008, 815);
+            this.ClientSize = new System.Drawing.Size(1027, 834);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel3);
@@ -812,19 +726,12 @@
             this.Text = "hanbat Class";
             this.Load += new System.EventHandler(this.Main_Load);
             this.homePnl.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
             this.customFrame1.ResumeLayout(false);
             this.customFrame1.PerformLayout();
             this.customFrame2.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.panel8.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel20.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -868,15 +775,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
@@ -894,16 +793,16 @@
         private System.Windows.Forms.ColumnHeader columnHeader30;
         private System.Windows.Forms.ColumnHeader columnHeader25;
         private System.Windows.Forms.ColumnHeader columnHeader31;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel19;
         private WindowsFormsApp2.CustomControl.customFrame customFrame1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private WindowsFormsApp2.CustomControl.customFrame customFrame3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label10;
     }
 }
 

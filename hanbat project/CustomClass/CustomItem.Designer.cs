@@ -65,6 +65,7 @@ namespace hanbat_project.CustomClass
             this.button3.Size = new System.Drawing.Size(40, 35);
             this.button3.TabIndex = 10494;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // progressBar1
             // 

@@ -12,15 +12,13 @@ namespace hanbat_project.Class
     public class HttpWebRequestClass
     {
 
-        object obj;
         CookieContainer cookies = new CookieContainer();
+
+        public static String _cookie = null;
 
         #region [ Construct ]
 
-        public HttpWebRequestClass(object obj)
-        {
-            this.obj = obj;
-        }
+        public HttpWebRequestClass() { }
 
         #endregion
 
@@ -59,6 +57,7 @@ namespace hanbat_project.Class
 
             if (html.Contains("한밭대학교, 사이버캠퍼스"))
             {
+                _cookie = cookies.GetCookieHeader(_uri);
                 return true;
             }
             else
@@ -72,8 +71,6 @@ namespace hanbat_project.Class
 
         public void getClasses(Main main)
         {
-
-            List<classData> _list = new List<classData>();
 
             String html;
 
@@ -176,7 +173,7 @@ namespace hanbat_project.Class
 
                             double _progressedVal = double.Parse(String.Format("{0:0.#}", (a / b) * 100));
 
-                            CustomItem _item = new CustomItem();
+                            CustomItem _item = new CustomItem(_cookie);
 
                             _item._uri = _Uri;
                             _item._ClassName = _name;
@@ -237,31 +234,6 @@ namespace hanbat_project.Class
 
         #endregion
 
-        #region [ takeClass ]
-
-        public void takeClass()
-        {
-            String html;
-
-            Uri _uri = new Uri("http://cyber.hanbat.ac.kr/Main.do?cmd=viewHome");
-
-            HttpWebRequest postReq = (HttpWebRequest)HttpWebRequest.Create(_uri);
-            postReq.Method = "GET";
-            postReq.Headers.Add("Cookie", cookies.GetCookieHeader(_uri));
-            postReq.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36";
-            postReq.Referer = "http://cyber.hanbat.ac.kr/Main.do?cmd=viewHome";
-            postReq.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9";
-
-            HttpWebResponse response = (HttpWebResponse)postReq.GetResponse();
-            using (StreamReader sr = new StreamReader(response.GetResponseStream()))
-            {
-                html = sr.ReadToEnd();
-                cookies.GetCookieHeader(_uri);
-                new Selenium(obj).openChrome("", cookies.GetCookieHeader(_uri));
-            }
-        }
-
-        #endregion
-
     }
+
 }

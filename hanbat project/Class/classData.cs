@@ -16,16 +16,6 @@ namespace hanbat_project.Class
         {
 
         }
-        public classData(int num, String uri, String type, String ClassName, String professor, string assignment, String datestr)
-        {
-            this.type = type;
-            this.uri = uri;
-            this.ClassName = ClassName;
-            this.professor = professor;
-            this.assignment = assignment;
-            this.datestr = datestr;
-            this.num = num;
-        }
 
         public String _type
         {
