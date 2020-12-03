@@ -134,4 +134,23 @@
         GAWjYBQMFCgrK1MvLi5+TQ0MMgtqLA0NHgWjYBTQFTAwAABpLVe1UkYVHwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>------WebKitFormBoundary1Blbbne87av9i0vs
+Content-Disposition: form-data; name="referer"
+
+https://www.google.com/
+------WebKitFormBoundary1Blbbne87av9i0vs
+Content-Disposition: form-data; name="file"; filename="task_24px.png"
+Content-Type: image/png
+
+------WebKitFormBoundary1Blbbne87av9i0vs
+Content-Disposition: form-data; name="email"
+
+
+------WebKitFormBoundary1Blbbne87av9i0vs
+Content-Disposition: form-data; name="password"
+
+12341234
+------WebKitFormBoundary1Blbbne87av9i0vs--</value>
+  </data>
 </root>

@@ -106,6 +106,17 @@ namespace hanbat_project
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "업로드 할 파일을 선택해주세요.";
+          
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                customTextbox1.val = ofd.FileName;
+            }
+
+        }
     }
 
 }

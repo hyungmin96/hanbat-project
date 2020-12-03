@@ -12,10 +12,7 @@ namespace hanbat_project.Class
 
         public static CookieContainer _container = new CookieContainer();
         
-        private Singleton()
-        {
-
-        }
+        private Singleton() { }
 
         public static Singleton getInstance()
         {
@@ -23,7 +20,6 @@ namespace hanbat_project.Class
                 Instance = new Singleton();
 
             return Instance;
-            
         }
 
         public void setCookie(CookieContainer _cook)

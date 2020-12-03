@@ -143,11 +143,10 @@
   </data>
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACmSURBVEhLYxg5oKGhQaypqelmc3PzDRAbKkwd0NLSIgsyGIj/gzDQoutAS2Sg0pQBoGG6QEOf
-        wwxHws9BclBl5AGgAeZAg96hGYyM34LUQJWTBoCanYD4M5JhuPAHYBDaQLURD4AuwxYsuPBzqDbyAbqh
-        UGHqgVELCIJRCwgCelhwGMmCg1DhUUBFAAzXQ0hhTCnGjCOgILUs+A0svvdBjR3ygIEBAKWGOO27r3ED
-        AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAKZJREFUSEtj
+        GDmgoaFBrKmp6WZzc/MNEBsqTB3Q0tIiCzIYiP+DMNCi60BLZKDSlAGgYbpAQ5/DDEfCz0FyUGXkAaAB
+        5kCD3qEZjIzfgtRAlZMGgJqdgPgzkmG48AdgENpAtREPgC7DFiy48HOoNvIBuqFQYeqBUQsIglELCAJ6
+        WHAYyYKDUOFRQEUADNdDSGFMKcaMI6AgtSz4DSy+90GNHfKAgQEApYY47buvcQMAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="customFrame3._setImg" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
