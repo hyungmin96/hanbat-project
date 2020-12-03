@@ -8,11 +8,11 @@ namespace hanbat_project.CustomClass
     public partial class CustomItem : UserControl
     {
 
-        String _cookie;
+        String cookie, classId;
 
         public CustomItem(String _cookie)
         {
-            this._cookie = _cookie;
+            this.cookie = _cookie;
             InitializeComponent();
         }
 
@@ -37,6 +37,11 @@ namespace hanbat_project.CustomClass
                 label1.Text = "학습안함(0%)";
         }
 
+        public String _classId
+        {
+            get { return classId; }
+            set { classId = value; }
+        }
         public String _uri
         {
             get { return uri; }
@@ -49,9 +54,14 @@ namespace hanbat_project.CustomClass
             set { ClassName = value; classLbl.Text = value; }
         }
 
+        private void classLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            Singleton.getInstance().openChrome(uri, _cookie);
+            //Singleton.getInstance().openChrome(cookie, uri, classId);
         }
 
         public String _curTime

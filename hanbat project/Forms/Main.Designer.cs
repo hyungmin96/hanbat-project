@@ -65,7 +65,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.customFrame3 = new WindowsFormsApp2.CustomControl.customFrame();
+            this.customComboBox1 = new FlattenCombo.CustomComboBox();
+            this.customComboBox6 = new FlattenCombo.CustomComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.customFrame1 = new WindowsFormsApp2.CustomControl.customFrame();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -95,6 +100,7 @@
             this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.homePnl.SuspendLayout();
             this.panel20.SuspendLayout();
+            this.customFrame3.SuspendLayout();
             this.customFrame1.SuspendLayout();
             this.customFrame2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -280,7 +286,7 @@
             this.homePnl.Location = new System.Drawing.Point(-1, 41);
             this.homePnl.MinimumSize = new System.Drawing.Size(0, 50);
             this.homePnl.Name = "homePnl";
-            this.homePnl.Size = new System.Drawing.Size(1029, 760);
+            this.homePnl.Size = new System.Drawing.Size(1029, 709);
             this.homePnl.TabIndex = 10496;
             // 
             // panel6
@@ -296,7 +302,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(1, 759);
+            this.panel5.Location = new System.Drawing.Point(1, 708);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1028, 1);
             this.panel5.TabIndex = 10500;
@@ -308,7 +314,7 @@
             this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel20.Location = new System.Drawing.Point(0, 0);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1, 760);
+            this.panel20.Size = new System.Drawing.Size(1, 709);
             this.panel20.TabIndex = 10491;
             // 
             // panel21
@@ -326,7 +332,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(1026, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 834);
+            this.panel4.Size = new System.Drawing.Size(1, 783);
             this.panel4.TabIndex = 10497;
             // 
             // panel1
@@ -335,14 +341,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 834);
+            this.panel1.Size = new System.Drawing.Size(1, 783);
             this.panel1.TabIndex = 10498;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(1, 833);
+            this.panel2.Location = new System.Drawing.Point(1, 782);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1025, 1);
             this.panel2.TabIndex = 10499;
@@ -359,7 +365,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel7.Location = new System.Drawing.Point(195, 9);
+            this.panel7.Location = new System.Drawing.Point(195, 11);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(2, 22);
             this.panel7.TabIndex = 10501;
@@ -375,6 +381,18 @@
             this.label2.TabIndex = 10502;
             this.label2.Text = "20187097(변형민) 님 안녕하세요";
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.Location = new System.Drawing.Point(12, 760);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(147, 12);
+            this.label6.TabIndex = 10503;
+            this.label6.Text = "오늘 날짜 : 2020-12-02";
+            // 
             // customFrame3
             // 
             this.customFrame3._setImg = ((System.Drawing.Image)(resources.GetObject("customFrame3._setImg")));
@@ -383,12 +401,87 @@
             this.customFrame3._subject2Color = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
             this.customFrame3._title = "검색계정 목록";
             this.customFrame3._usePnl = true;
+            this.customFrame3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.customFrame3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
+            this.customFrame3.Controls.Add(this.customComboBox1);
+            this.customFrame3.Controls.Add(this.customComboBox6);
+            this.customFrame3.Controls.Add(this.label8);
+            this.customFrame3.Controls.Add(this.label5);
             this.customFrame3.FrameName = "customFrame";
-            this.customFrame3.Location = new System.Drawing.Point(34, 615);
+            this.customFrame3.Location = new System.Drawing.Point(34, 617);
             this.customFrame3.Name = "customFrame3";
-            this.customFrame3.Size = new System.Drawing.Size(479, 118);
+            this.customFrame3.Size = new System.Drawing.Size(479, 74);
             this.customFrame3.TabIndex = 10510;
+            // 
+            // customComboBox1
+            // 
+            this.customComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
+            this.customComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customComboBox1.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
+            this.customComboBox1.ButtonColor = System.Drawing.Color.Gray;
+            this.customComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.customComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customComboBox1.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.customComboBox1.ForeColor = System.Drawing.Color.Gray;
+            this.customComboBox1.FormattingEnabled = true;
+            this.customComboBox1.IntegralHeight = false;
+            this.customComboBox1.ItemHeight = 14;
+            this.customComboBox1.Items.AddRange(new object[] {
+            "영어/en",
+            "인도네시아/id",
+            "베트남/vi"});
+            this.customComboBox1.Location = new System.Drawing.Point(120, 41);
+            this.customComboBox1.Margin = new System.Windows.Forms.Padding(8, 5, 0, 0);
+            this.customComboBox1.Name = "customComboBox1";
+            this.customComboBox1.Size = new System.Drawing.Size(166, 22);
+            this.customComboBox1.TabIndex = 10512;
+            // 
+            // customComboBox6
+            // 
+            this.customComboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
+            this.customComboBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customComboBox6.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
+            this.customComboBox6.ButtonColor = System.Drawing.Color.Gray;
+            this.customComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.customComboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customComboBox6.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.customComboBox6.ForeColor = System.Drawing.Color.Gray;
+            this.customComboBox6.FormattingEnabled = true;
+            this.customComboBox6.IntegralHeight = false;
+            this.customComboBox6.ItemHeight = 14;
+            this.customComboBox6.Items.AddRange(new object[] {
+            "영어/en",
+            "인도네시아/id",
+            "베트남/vi"});
+            this.customComboBox6.Location = new System.Drawing.Point(108, 10);
+            this.customComboBox6.Margin = new System.Windows.Forms.Padding(8, 5, 0, 0);
+            this.customComboBox6.Name = "customComboBox6";
+            this.customComboBox6.Size = new System.Drawing.Size(166, 22);
+            this.customComboBox6.TabIndex = 10511;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("페이북 Bold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.ForeColor = System.Drawing.Color.Gray;
+            this.label8.Location = new System.Drawing.Point(15, 46);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 13);
+            this.label8.TabIndex = 10504;
+            this.label8.Text = "오늘 과제 마감 목록 : ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("페이북 Bold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(15, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(94, 13);
+            this.label5.TabIndex = 10503;
+            this.label5.Text = "미제출 과제 목록 : ";
             // 
             // customFrame1
             // 
@@ -710,7 +803,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(1027, 834);
+            this.ClientSize = new System.Drawing.Size(1027, 783);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel3);
@@ -727,6 +821,8 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.homePnl.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
+            this.customFrame3.ResumeLayout(false);
+            this.customFrame3.PerformLayout();
             this.customFrame1.ResumeLayout(false);
             this.customFrame1.PerformLayout();
             this.customFrame2.ResumeLayout(false);
@@ -774,16 +870,11 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label17;
         private WindowsFormsApp2.CustomControl.customFrame customFrame2;
         public ExtendedControls.CustomListView customListView2;
         private System.Windows.Forms.ColumnHeader columnHeader23;
@@ -795,7 +886,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader31;
         private System.Windows.Forms.Panel panel13;
         private WindowsFormsApp2.CustomControl.customFrame customFrame1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private WindowsFormsApp2.CustomControl.customFrame customFrame3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
@@ -803,6 +893,17 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
+        private FlattenCombo.CustomComboBox customComboBox6;
+        private FlattenCombo.CustomComboBox customComboBox1;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.Label label17;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label13;
     }
 }
 

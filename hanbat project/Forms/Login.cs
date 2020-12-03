@@ -82,17 +82,13 @@ namespace hanbat_project
         private void button2_Click(object sender, EventArgs e)
         {
 
-            HttpWebRequestClass http = new HttpWebRequestClass();
-
-            if (http.Login(customTextbox1.val, customTextbox2.val))
+            if (new Strategy.httpLogin().LoginMethod(customTextbox1.val, customTextbox2.val))
             {
-                new Main(http).Show();
+                new Main().Show();
                 this.Hide();
             }
             else
-            {
                 MessageBox.Show("잘못된 계정입니다. 다시 시도해주세요.", "로그인 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
 
         }
 

@@ -1,0 +1,165 @@
+﻿using hanbat_project.CustomClass;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+
+namespace hanbat_project.Strategy
+{
+    public class displayClasses : StrategyClass
+    {
+
+        CookieContainer _cookieContainer = Main._cookieContainer;
+
+        public override void method()
+        {
+
+            String _classNum = Main.main.customListView2.FocusedItem.SubItems[5].Text, html;
+
+            Uri _uri = new Uri("http://cyber.hanbat.ac.kr/MCourse.do?cmd=viewStudyHome&courseDTO.courseId=" + _classNum + "&boardInfoDTO.boardInfoGubun=study_home&boardGubun=study_course&gubun=study_course");
+
+            HttpWebRequest postReq = (HttpWebRequest)HttpWebRequest.Create(_uri);
+            postReq.Method = "GET";
+            postReq.UserAgent = "Mozilla/5.0 (Linux; Android 9.0; MI 8 SE) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.119 Mobile Safari/537.36";
+            postReq.Referer = "http://cyber.hanbat.ac.kr/";
+            postReq.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9";
+            postReq.CookieContainer = _cookieContainer;
+
+            HttpWebResponse res = (HttpWebResponse)postReq.GetResponse();
+            using (StreamReader sr = new StreamReader(res.GetResponseStream()))
+            {
+                html = sr.ReadToEnd();
+            }
+
+            foreach (String _date in html.Split(new String[] { "icon-time mr5" }, StringSplitOptions.RemoveEmptyEntries))
+            {
+
+                if (_date.Contains("boxTable"))
+                {
+
+                    List<CustomItem> _lst = new List<CustomItem>();
+
+                    String _weekNum = Regex.Split(Regex.Split(_date, "></i>")[1], "<")[0];
+                    String _deadline = Regex.Split(Regex.Split(_date, "<span>")[1], "</span>")[0];
+
+                    String _keyValue = Regex.Replace(Regex.Replace((_weekNum + "\n" + _deadline), "\t", String.Empty), "\r\n", String.Empty).Trim();
+
+                    Main._dict.Add(_keyValue, null);
+
+                    foreach (String _info in _date.Split(new String[] { "boxTable" }, StringSplitOptions.RemoveEmptyEntries))
+                    {
+                        if (_info.Contains("viewStudyContents"))
+                        {
+
+                            String _Uri = Regex.Split(Regex.Split(_info, "'")[1], "'")[0];
+                            String _name = StripHTML(Regex.Split(Regex.Split(_info, "<li><span class=\"fcBluesky\">")[1], "</li>")[0]);
+
+                            String _curTime;
+                            String _endTime;
+
+                            if (!_info.Contains("학습안함"))
+                            {
+                                _curTime = Regex.Split(Regex.Split(Regex.Split(_info, "<ul class=\"bar\">")[1], ">")[1], "/")[0].Trim();
+                                _endTime = Regex.Split(Regex.Split(Regex.Split(_info, "<ul class=\"bar\">")[1], "/ ")[2], "<")[0].Trim();
+                            }
+                            else
+                            {
+                                _curTime = "0";
+                                _endTime = "1";
+                            }
+
+                            if (_curTime == "") _curTime = "1";
+
+                            var a = (double)(getTime(_curTime));
+                            var b = (double)(getTime(_endTime));
+
+                            double _progressedVal = double.Parse(String.Format("{0:0.#}", (a / b) * 100));
+
+                            CustomItem _item = new CustomItem(_cookieContainer.GetCookieHeader(_uri));
+
+                            _item._uri = _Uri;
+                            _item._classId = _classNum;
+                            _item._ClassName = _name;
+                            _item._curTime = _curTime;
+                            _item._endTime = _endTime;
+                            _item._progress = (_progressedVal >= 100) ? 100 : _progressedVal;
+
+                            _lst.Add(_item);
+
+                        }
+                    }
+
+                    Main._dict[_keyValue] = _lst;
+
+                }
+            }
+
+            showClasses();
+
+        }
+
+        private void showClasses()
+        {
+            Main.main.label13.Text = Main.main.customListView2.FocusedItem.SubItems[3].Text;
+            Main.main.label11.Text = Main.main.customListView2.FocusedItem.SubItems[4].Text;
+
+            Main.main.flowLayoutPanel1.Controls.Clear();
+
+            if (Main._dict.Count > 0)
+            {
+                String _key = Main._dict.Keys.ToList()[Main._dict.Count - 1];
+
+                Main.main.label17.Text = _key.Split('\n')[0];
+                Main.main.label15.Text = _key.Split('\n')[1].Trim();
+
+                foreach (CustomItem _item in Main._dict[_key])
+                {
+                    Main.main.flowLayoutPanel1.Controls.Add(_item);
+                }
+            }
+            else
+                MessageBox.Show("수업목록이 존재하지 않습니다.");
+        }
+
+        private int getTime(String time)
+        {
+            if (time.Length > 0 && time != "0")
+            {
+
+                int _m;
+
+                if (time.Contains("분") && time.Contains("초"))
+                    _m = int.Parse(Regex.Split(time, "분")[0]);
+                else if (time.Contains("분"))
+                    _m = int.Parse(Regex.Split(time, "분")[0]);
+                else
+                    _m = int.Parse(Regex.Split(time, "초")[0]);
+
+                int _s;
+                if (time.Contains("분") && time.Contains("초"))
+                    _s = int.Parse(Regex.Split(time, "분")[0]);
+                else if (time.Contains("분"))
+                    _s = int.Parse(Regex.Split(time, "분")[0]);
+                else
+                    _s = int.Parse(Regex.Split(time, "초")[0]);
+
+                int total = (_m * 60) + _s;
+
+                return total;
+            }
+
+            return 0;
+
+        }
+
+        private static string StripHTML(string input)
+        {
+            return Regex.Replace(input, "<.*?>", String.Empty);
+        }
+
+    }
+
+}

@@ -25,10 +25,14 @@ namespace hanbat_project.Class
 
         #region [ take a class ]
 
-        public void openChrome(String _url, String _cookie)
+        public void openChrome(String _cookie, String _url, String _classId)
         {
 
-            if (driver == null || driver.WindowHandles.Count < 0)
+            int _driverNum;
+
+            try { _driverNum = driver.WindowHandles.Count; } catch (Exception ex) { _driverNum = 0; }
+
+            if (_driverNum < 1)
             {
                 driverS = ChromeDriverService.CreateDefaultService();
                 driverS.HideCommandPromptWindow = true;
@@ -44,8 +48,8 @@ namespace hanbat_project.Class
                 driver = new ChromeDriver(driverS, driver0);
             }
 
-            waitNavigate("http://cyber.hanbat.ac.kr/MLesson.do?cmd=viewStudyContentsForm&studyRecordDTO.lessonElementId=" + _url + "&courseDTO.courseId=urlvalue");
-           
+            driver.Navigate().GoToUrl("http://cyber.hanbat.ac.kr/MLesson.do?cmd=viewStudyContentsForm&studyRecordDTO.lessonElementId=" + _url + "&courseDTO.courseId=" + _classId + "");
+
             driver.Manage().Cookies.AddCookie(new OpenQA.Selenium.Cookie("RSN_JSESSIONID", Regex.Split(Regex.Split(_cookie, "RSN_JSESSIONID=")[1], ";")[0]));
 
             driver.Navigate().Refresh();
@@ -54,7 +58,9 @@ namespace hanbat_project.Class
 
             Actions action = new Actions(driver);
 
-            IWebElement playbtn = driver.FindElement(By.XPath("//*[@id=\"movie_player\"]/div[4]/div"));
+            waitElement();
+
+            IWebElement playbtn = driver.FindElement(By.XPath("//*[@id=\"movie_player\"]/div[4]/button"));
 
             action.MoveToElement(playbtn).Click(playbtn).Perform();
 
