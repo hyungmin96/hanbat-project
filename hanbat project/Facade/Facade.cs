@@ -9,10 +9,10 @@ namespace hanbat_project.Facade
         private getIdInfo getIdInfo;
         private getDate GetDate;
 
-        public FacadeClass(Main main, CookieContainer cookies)
+        public FacadeClass(Main main)
         {
-            getclass = new getClasses(main, cookies);
-            getIdInfo = new getIdInfo(main, cookies);
+            getclass = new getClasses(main);
+            getIdInfo = new getIdInfo(main);
             GetDate = new getDate(main);
         }
 

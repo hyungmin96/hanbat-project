@@ -23,13 +23,11 @@ namespace hanbat_project
 
         public static Dictionary<String, List<CustomItem>> _dict = new Dictionary<string, List<CustomItem>>();
 
-        int currentPage = 0;
-
-        public static CookieContainer _cookieContainer;
-
         public static Main main;
 
         private String _classId;
+
+        int currentPage = 0;
 
         #endregion
 
@@ -42,7 +40,7 @@ namespace hanbat_project
 
             main = this;
 
-            FacadeClass facade = new FacadeClass(this, _cookieContainer);
+            FacadeClass facade = new FacadeClass(this);
             facade.displayInfo();
         }
 
@@ -125,13 +123,16 @@ namespace hanbat_project
             context = new Strategy.Context(new Strategy.displayClasses());
             context.methodExecute();
 
+            currentPage = _dict.Count - 1;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             // 이전버튼
-            if (_dict.Count < 1)
-                MessageBox.Show("가장 마지막 주차의 수업입니다.", "정보없음", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (currentPage == 0)
+                MessageBox.Show("가장 처음 주차의 수업입니다.", "정보없음", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
                 currentPage--;
@@ -152,6 +153,7 @@ namespace hanbat_project
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             // 다음버튼
             if (currentPage == _dict.Count - 1)
                 MessageBox.Show("가장 최신 주차의 수업입니다.", "정보없음", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -171,7 +173,6 @@ namespace hanbat_project
                     flowLayoutPanel1.Controls.Add(_item);
                 }
             }
-
         }
 
         private void button13_Click_1(object sender, EventArgs e)
@@ -185,6 +186,10 @@ namespace hanbat_project
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new Board().ShowDialog();
+        }
     }
 
 }

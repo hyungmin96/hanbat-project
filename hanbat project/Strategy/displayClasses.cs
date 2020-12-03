@@ -1,4 +1,5 @@
-﻿using hanbat_project.CustomClass;
+﻿using hanbat_project.Class;
+using hanbat_project.CustomClass;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,27 +13,16 @@ namespace hanbat_project.Strategy
     public class displayClasses : StrategyClass
     {
 
-        CookieContainer _cookieContainer = Main._cookieContainer;
-
         public override void method()
         {
 
-            String _classNum = Main.main.customListView2.FocusedItem.SubItems[5].Text, html;
+            Main._dict.Clear();
+
+            String _classNum = Main.main.customListView2.FocusedItem.SubItems[5].Text;
 
             Uri _uri = new Uri("http://cyber.hanbat.ac.kr/MCourse.do?cmd=viewStudyHome&courseDTO.courseId=" + _classNum + "&boardInfoDTO.boardInfoGubun=study_home&boardGubun=study_course&gubun=study_course");
 
-            HttpWebRequest postReq = (HttpWebRequest)HttpWebRequest.Create(_uri);
-            postReq.Method = "GET";
-            postReq.UserAgent = "Mozilla/5.0 (Linux; Android 9.0; MI 8 SE) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.119 Mobile Safari/537.36";
-            postReq.Referer = "http://cyber.hanbat.ac.kr/";
-            postReq.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9";
-            postReq.CookieContainer = _cookieContainer;
-
-            HttpWebResponse res = (HttpWebResponse)postReq.GetResponse();
-            using (StreamReader sr = new StreamReader(res.GetResponseStream()))
-            {
-                html = sr.ReadToEnd();
-            }
+            String html = new httpMethod("GET", _uri).Method();
 
             foreach (String _date in html.Split(new String[] { "icon-time mr5" }, StringSplitOptions.RemoveEmptyEntries))
             {
@@ -78,7 +68,7 @@ namespace hanbat_project.Strategy
 
                             double _progressedVal = double.Parse(String.Format("{0:0.#}", (a / b) * 100));
 
-                            CustomItem _item = new CustomItem(_cookieContainer.GetCookieHeader(_uri));
+                            CustomItem _item = new CustomItem(Singleton.getInstance().getCookie().GetCookieHeader(_uri));
 
                             _item._uri = _Uri;
                             _item._classId = _classNum;

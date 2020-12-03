@@ -1,37 +1,28 @@
 ﻿using hanbat_project.Class;
 using System;
-using System.IO;
+using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace hanbat_project.Strategy
 {
-    public class httpLogin
+    public class httpLogin : StrategyClass
     {
 
-        public CookieContainer _cookieContainer = new CookieContainer();
+        public bool result = false;
 
-        public String _cookie = null;
-
-        public bool LoginMethod(String Id, String Pw)
+        public override void method()
         {
-
-
             Uri _uri = new Uri("https://cyber.hanbat.ac.kr/User.do?cmd=loginUser");
+            String postData = "cmd=loginUser&userId=" + new Login().customTextbox1.val + "&password=" + new Login().customTextbox2.val + "";
 
-            String PostData = "cmd=loginUser&userId=" + Id + "&password=" + Pw;
+            String html = new httpMethod("POST", _uri, postData).Method();
 
-            String html = Singleton.getInstance("POST", PostData, _uri).httpMethod();
-
-            if (html.Contains("한밭대학교, 사이버캠퍼스"))
-            {
-                _cookie = _cookieContainer.GetCookieHeader(_uri);
-                return true;
-            }
+            if (html.Contains("한밭대학교, 사이버캠퍼스입니다"))
+                result = true;
             else
-                return false;
-
+                result = false;
         }
 
     }

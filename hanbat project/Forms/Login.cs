@@ -82,13 +82,19 @@ namespace hanbat_project
         private void button2_Click(object sender, EventArgs e)
         {
 
-            if (new Strategy.httpLogin().LoginMethod(customTextbox1.val, customTextbox2.val))
+            Strategy.httpLogin login = new Strategy.httpLogin();
+
+            Strategy.Context context = new Strategy.Context(login);
+
+            context.methodExecute();
+
+            if (login.result)
             {
                 new Main().Show();
                 this.Hide();
             }
             else
-                MessageBox.Show("잘못된 계정입니다. 다시 시도해주세요.", "로그인 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("로그인에 실패하였습니다.", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
 

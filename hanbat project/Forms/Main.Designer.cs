@@ -387,7 +387,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(12, 760);
+            this.label6.Location = new System.Drawing.Point(12, 761);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(147, 12);
             this.label6.TabIndex = 10503;
@@ -416,7 +416,7 @@
             // customComboBox1
             // 
             this.customComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
-            this.customComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(48)))), ((int)(((byte)(49)))));
             this.customComboBox1.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
             this.customComboBox1.ButtonColor = System.Drawing.Color.Gray;
             this.customComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -439,7 +439,7 @@
             // customComboBox6
             // 
             this.customComboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
-            this.customComboBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customComboBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(48)))), ((int)(((byte)(49)))));
             this.customComboBox6.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
             this.customComboBox6.ButtonColor = System.Drawing.Color.Gray;
             this.customComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -538,6 +538,7 @@
             this.button4.Size = new System.Drawing.Size(28, 28);
             this.button4.TabIndex = 10505;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -555,9 +556,8 @@
             this.label17.ForeColor = System.Drawing.Color.DimGray;
             this.label17.Location = new System.Drawing.Point(179, 69);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(45, 15);
+            this.label17.Size = new System.Drawing.Size(0, 15);
             this.label17.TabIndex = 10494;
-            this.label17.Text = "12주차";
             // 
             // button3
             // 
@@ -611,9 +611,8 @@
             this.label15.ForeColor = System.Drawing.Color.DimGray;
             this.label15.Location = new System.Drawing.Point(124, 88);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(161, 13);
+            this.label15.Size = new System.Drawing.Size(0, 13);
             this.label15.TabIndex = 10491;
-            this.label15.Text = "2020-11-23 ~ 2020-11-30";
             // 
             // label11
             // 
@@ -624,7 +623,6 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(153, 13);
             this.label11.TabIndex = 10488;
-            this.label11.Text = "고급 파이썬 프로그래밍";
             // 
             // label13
             // 
@@ -634,9 +632,8 @@
             this.label13.ForeColor = System.Drawing.Color.SteelBlue;
             this.label13.Location = new System.Drawing.Point(100, 114);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 13);
+            this.label13.Size = new System.Drawing.Size(0, 13);
             this.label13.TabIndex = 10490;
-            this.label13.Text = "장한얼";
             // 
             // label14
             // 

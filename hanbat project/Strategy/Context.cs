@@ -11,6 +11,7 @@ namespace hanbat_project.Strategy
     {
 
         public StrategyClass _strategy;
+        public bool _result;
 
         public Context(StrategyClass _strategy)
         {

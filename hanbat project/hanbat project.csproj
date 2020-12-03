@@ -72,8 +72,13 @@
     <Compile Include="Facade\getDate.cs" />
     <Compile Include="Facade\getIdInfo.cs" />
     <Compile Include="Facade\getClasses.cs" />
-    <Compile Include="Strategy\httpLogin.cs" />
     <Compile Include="Facade\Facade.cs" />
+    <Compile Include="Forms\Board.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Board.Designer.cs">
+      <DependentUpon>Board.cs</DependentUpon>
+    </Compile>
     <Compile Include="SingleTon\Selenium.cs" />
     <Compile Include="SingleTon\Singleton.cs" />
     <Compile Include="CustomClass\CustomButton.cs">
@@ -148,9 +153,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy\httpLogin.cs" />
     <Compile Include="Strategy\Context.cs" />
     <Compile Include="Strategy\displayClasses.cs" />
     <Compile Include="Strategy\getNotice.cs" />
+    <Compile Include="Class\httpMethod.cs" />
     <Compile Include="Strategy\StrategyClass.cs" />
     <EmbeddedResource Include="CustomClass\CustomButton.resx">
       <DependentUpon>CustomButton.cs</DependentUpon>
@@ -184,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Board.resx">
+      <DependentUpon>Board.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
