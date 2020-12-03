@@ -69,15 +69,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Option.cs" />
+    <Compile Include="dataClass\AssignmentData.cs" />
+    <Compile Include="Facade\getAssignment.cs" />
     <Compile Include="Facade\getDate.cs" />
     <Compile Include="Facade\getIdInfo.cs" />
     <Compile Include="Facade\getClasses.cs" />
     <Compile Include="Facade\Facade.cs" />
-    <Compile Include="Forms\Board.cs">
+    <Compile Include="Forms\AssignmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Board.Designer.cs">
-      <DependentUpon>Board.cs</DependentUpon>
+    <Compile Include="Forms\AssignmentForm.Designer.cs">
+      <DependentUpon>AssignmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BoardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BoardForm.Designer.cs">
+      <DependentUpon>BoardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SingleTon\Selenium.cs" />
     <Compile Include="SingleTon\Singleton.cs" />
@@ -109,10 +117,10 @@
     <Compile Include="CustomClass\customFrame.designer.cs">
       <DependentUpon>customFrame.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomClass\CustomItem.cs">
+    <Compile Include="dataClass\CustomItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomClass\CustomItem.Designer.cs">
+    <Compile Include="dataClass\CustomItem.Designer.cs">
       <DependentUpon>CustomItem.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomClass\CustomListView.cs">
@@ -139,20 +147,21 @@
     <Compile Include="CustomClass\CustomTextbox.designer.cs">
       <DependentUpon>CustomTextbox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Login.cs">
+    <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Main.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy\getContent.cs" />
     <Compile Include="Strategy\httpLogin.cs" />
     <Compile Include="Strategy\Context.cs" />
     <Compile Include="Strategy\displayClasses.cs" />
@@ -174,7 +183,7 @@
     <EmbeddedResource Include="CustomClass\customFrame.resx">
       <DependentUpon>customFrame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomClass\CustomItem.resx">
+    <EmbeddedResource Include="dataClass\CustomItem.resx">
       <DependentUpon>CustomItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomClass\CustomListView.resx">
@@ -189,14 +198,17 @@
     <EmbeddedResource Include="CustomClass\CustomTextbox.resx">
       <DependentUpon>CustomTextbox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AssignmentForm.resx">
+      <DependentUpon>AssignmentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Board.resx">
-      <DependentUpon>Board.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\BoardForm.resx">
+      <DependentUpon>BoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

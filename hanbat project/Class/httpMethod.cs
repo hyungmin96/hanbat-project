@@ -7,7 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hanbat_project.Strategy
+namespace hanbat_project.Class
 {
     public class httpMethod
     {
@@ -43,6 +43,8 @@ namespace hanbat_project.Strategy
                     sw.Write(byteData, 0, byteData.Length);
                 }
             }
+
+            Singleton.getInstance().setCookie(postReq.CookieContainer);
 
             HttpWebResponse response = (HttpWebResponse)postReq.GetResponse();
             using (StreamReader sr = new StreamReader(response.GetResponseStream()))

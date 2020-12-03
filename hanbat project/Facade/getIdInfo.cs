@@ -13,22 +13,16 @@ namespace hanbat_project.Facade
     public class getIdInfo
     {
 
-        Main main;
-
-        public getIdInfo(Main main)
-        {
-            this.main = main;
-        }
+        public getIdInfo()  {  }
 
         public void getInfo()
         {
-            // 로그인한 계정의 학번과 이름을 가져옴
 
             Uri _uri = new Uri("http://cyber.hanbat.ac.kr/Main.do?cmd=viewHome&userDTO.localeKey=ko");
 
-            //String html = Singleton.getInstance("GET", _uri).httpMethod();
+            String html = new Class.httpMethod("GET", _uri).Method();
 
-            //main.label2.Text = Regex.Replace(Regex.Split(Regex.Split(html, "<p class=\"mt5\"><span>")[1], "</p>")[0], "</span>", String.Empty);
+            MainForm.main.label2.Text = Regex.Replace(Regex.Split(Regex.Split(html, "<p class=\"mt5\"><span>")[1], "</p>")[0], "</span>", String.Empty);
 
         }
 

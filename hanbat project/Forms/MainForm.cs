@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace hanbat_project
 {
-    public partial class Main : Form
+    public partial class MainForm : Form
     {
 
         #region [ Gloval Variable ]
@@ -23,7 +23,7 @@ namespace hanbat_project
 
         public static Dictionary<String, List<CustomItem>> _dict = new Dictionary<string, List<CustomItem>>();
 
-        public static Main main;
+        public static MainForm main;
 
         private String _classId;
 
@@ -35,12 +35,12 @@ namespace hanbat_project
 
         #region [ Form Load ]
 
-        private void Main_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
             main = this;
 
-            FacadeClass facade = new FacadeClass(this);
+            FacadeClass facade = new FacadeClass();
             facade.displayInfo();
         }
 
@@ -48,7 +48,7 @@ namespace hanbat_project
 
         #region [ Form Constructor ]
 
-        public Main()
+        public MainForm()
         {
 
             InitializeComponent();
@@ -188,8 +188,21 @@ namespace hanbat_project
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new Board().ShowDialog();
+
+            Strategy.getNotice notice = new Strategy.getNotice();
+
+            Strategy.Context context = new Strategy.Context(notice);
+
+            context.methodExecute();
+
+            new Board(notice._dict).ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new AssignmentForm(getAssignment._dict).ShowDialog();
+        }
+
     }
 
 }

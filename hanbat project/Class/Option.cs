@@ -3,25 +3,15 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using hanbat_project;
 
 namespace WindowsFormsApp2.Class
 {
 
-    public class DelayOp
+    public class Option
     {
-
-        public static readonly Random getrandom = new Random();
-
-        public static int GetRandomNumber(int min, int max)
-        {
-
-            lock (getrandom) // synchronize
-            {
-                return getrandom.Next(min, max);
-            }
-        }
 
         public static DateTime Delay(int MS)
         {
@@ -38,6 +28,12 @@ namespace WindowsFormsApp2.Class
 
             return DateTime.Now;
         }
+
+        public static string StripHTML(string input)
+        {
+            return Regex.Replace(input, "<.*?>", String.Empty);
+        }
+
 
     }
 

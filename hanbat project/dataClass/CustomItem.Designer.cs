@@ -50,7 +50,6 @@ namespace hanbat_project.CustomClass
             this.classLbl.Size = new System.Drawing.Size(337, 12);
             this.classLbl.TabIndex = 3;
             this.classLbl.Text = "조회된 주차의 강의제목 (1)";
-            this.classLbl.Click += new System.EventHandler(this.classLbl_Click);
             // 
             // button3
             // 

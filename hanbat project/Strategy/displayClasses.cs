@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using WindowsFormsApp2.Class;
 
 namespace hanbat_project.Strategy
 {
@@ -16,9 +17,9 @@ namespace hanbat_project.Strategy
         public override void method()
         {
 
-            Main._dict.Clear();
+            MainForm._dict.Clear();
 
-            String _classNum = Main.main.customListView2.FocusedItem.SubItems[5].Text;
+            String _classNum = MainForm.main.customListView2.FocusedItem.SubItems[5].Text;
 
             Uri _uri = new Uri("http://cyber.hanbat.ac.kr/MCourse.do?cmd=viewStudyHome&courseDTO.courseId=" + _classNum + "&boardInfoDTO.boardInfoGubun=study_home&boardGubun=study_course&gubun=study_course");
 
@@ -37,7 +38,7 @@ namespace hanbat_project.Strategy
 
                     String _keyValue = Regex.Replace(Regex.Replace((_weekNum + "\n" + _deadline), "\t", String.Empty), "\r\n", String.Empty).Trim();
 
-                    Main._dict.Add(_keyValue, null);
+                    MainForm._dict.Add(_keyValue, null);
 
                     foreach (String _info in _date.Split(new String[] { "boxTable" }, StringSplitOptions.RemoveEmptyEntries))
                     {
@@ -45,7 +46,7 @@ namespace hanbat_project.Strategy
                         {
 
                             String _Uri = Regex.Split(Regex.Split(_info, "'")[1], "'")[0];
-                            String _name = StripHTML(Regex.Split(Regex.Split(_info, "<li><span class=\"fcBluesky\">")[1], "</li>")[0]);
+                            String _name = Option.StripHTML(Regex.Split(Regex.Split(_info, "<li><span class=\"fcBluesky\">")[1], "</li>")[0]);
 
                             String _curTime;
                             String _endTime;
@@ -68,7 +69,7 @@ namespace hanbat_project.Strategy
 
                             double _progressedVal = double.Parse(String.Format("{0:0.#}", (a / b) * 100));
 
-                            CustomItem _item = new CustomItem(Singleton.getInstance().getCookie().GetCookieHeader(_uri));
+                            CustomItem _item = new CustomItem();
 
                             _item._uri = _Uri;
                             _item._classId = _classNum;
@@ -82,7 +83,7 @@ namespace hanbat_project.Strategy
                         }
                     }
 
-                    Main._dict[_keyValue] = _lst;
+                    MainForm._dict[_keyValue] = _lst;
 
                 }
             }
@@ -93,21 +94,21 @@ namespace hanbat_project.Strategy
 
         private void showClasses()
         {
-            Main.main.label13.Text = Main.main.customListView2.FocusedItem.SubItems[3].Text;
-            Main.main.label11.Text = Main.main.customListView2.FocusedItem.SubItems[4].Text;
+            MainForm.main.label13.Text = MainForm.main.customListView2.FocusedItem.SubItems[3].Text;
+            MainForm.main.label11.Text = MainForm.main.customListView2.FocusedItem.SubItems[4].Text;
 
-            Main.main.flowLayoutPanel1.Controls.Clear();
+            MainForm.main.flowLayoutPanel1.Controls.Clear();
 
-            if (Main._dict.Count > 0)
+            if (MainForm._dict.Count > 0)
             {
-                String _key = Main._dict.Keys.ToList()[Main._dict.Count - 1];
+                String _key = MainForm._dict.Keys.ToList()[MainForm._dict.Count - 1];
 
-                Main.main.label17.Text = _key.Split('\n')[0];
-                Main.main.label15.Text = _key.Split('\n')[1].Trim();
+                MainForm.main.label17.Text = _key.Split('\n')[0];
+                MainForm.main.label15.Text = _key.Split('\n')[1].Trim();
 
-                foreach (CustomItem _item in Main._dict[_key])
+                foreach (CustomItem _item in MainForm._dict[_key])
                 {
-                    Main.main.flowLayoutPanel1.Controls.Add(_item);
+                    MainForm.main.flowLayoutPanel1.Controls.Add(_item);
                 }
             }
             else
@@ -143,11 +144,6 @@ namespace hanbat_project.Strategy
 
             return 0;
 
-        }
-
-        private static string StripHTML(string input)
-        {
-            return Regex.Replace(input, "<.*?>", String.Empty);
         }
 
     }

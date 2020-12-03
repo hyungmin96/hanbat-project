@@ -21,6 +21,12 @@ namespace hanbat_project
 
         private Point Pos;
 
+        public static Board board;
+
+        public static String BoardId;
+
+        Dictionary<String, Tuple<String, String>> _dict;
+
         #endregion
 
         #region [ Form Method ]
@@ -30,14 +36,25 @@ namespace hanbat_project
         private void Board_Load(object sender, EventArgs e)
         {
 
+            board = this;
+
+            customFrame2._subject = MainForm.main.customListView2.FocusedItem.SubItems[4].Text + " 수업의 공지사항 목록을 불러옵니다.";
+
+            foreach (var _item in _dict)
+            {
+                String[] arr = new string[] { "", Convert.ToString(customListView2.Items.Count + 1), _item.Key, _dict[_item.Key].Item2, _dict[_item.Key].Item1, "" };
+                addItems(customListView2, arr);
+            }
         }
 
         #endregion
 
         #region [ Form Constructor ]
 
-        public Board()
+        public Board(Dictionary<String, Tuple<String, String>> _dict)
         {
+
+            this._dict = _dict;
 
             InitializeComponent();
 
@@ -77,7 +94,14 @@ namespace hanbat_project
             this.Close();
         }
 
+        private void customListView2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
 
+            label3.Text = customListView2.FocusedItem.SubItems[2].Text;
+
+            Strategy.Context context = new Strategy.Context(new Strategy.getContent());
+            context.methodExecute();
+        }
     }
 
 }

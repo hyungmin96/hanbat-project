@@ -8,12 +8,14 @@ namespace hanbat_project.Facade
         private getClasses getclass;
         private getIdInfo getIdInfo;
         private getDate GetDate;
+        private getAssignment getAssignment;
 
-        public FacadeClass(Main main)
+        public FacadeClass()
         {
-            getclass = new getClasses(main);
-            getIdInfo = new getIdInfo(main);
-            GetDate = new getDate(main);
+            getclass = new getClasses();
+            getIdInfo = new getIdInfo();
+            GetDate = new getDate();
+            getAssignment = new getAssignment();
         }
 
         public void displayInfo()
@@ -21,6 +23,7 @@ namespace hanbat_project.Facade
             getclass.getClassList();
             getIdInfo.getInfo();
             GetDate.getDateMethod();
+            getAssignment.getAssignmentMethod();
         }
 
     }

@@ -9,16 +9,11 @@ namespace hanbat_project.Facade
     public class getDate
     {
 
-        Main main;
-
-        public getDate(Main main)
-        {
-            this.main = main;
-        }
+        public getDate() { }
 
         public void getDateMethod()
         {
-            main.label6.Text = "오늘 날짜 : " + DateTime.Now.ToString("yyyy/MM/dd tt hh:mm:ss");
+            MainForm.main.label6.Text = "오늘 날짜 : " + DateTime.Now.ToString("yyyy/MM/dd tt hh:mm:ss");
         }
 
 

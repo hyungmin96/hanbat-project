@@ -8,24 +8,13 @@ namespace hanbat_project.CustomClass
     public partial class CustomItem : UserControl
     {
 
-        String cookie, classId;
+        String classId;
 
-        public CustomItem(String _cookie)
+        private String ClassName, uri, curTime, endTime;
+        private double progress;
+
+        public CustomItem()
         {
-            this.cookie = _cookie;
-            InitializeComponent();
-        }
-
-        String  ClassName, uri, curTime, endTime;
-        double progress;
-
-        public CustomItem(String uri, String ClassName, String curTime, String endTime, double progress)
-        {
-            this.uri = uri;
-            this.ClassName = ClassName;
-            this.curTime = curTime;
-            this.endTime = endTime;
-            this.progress = progress;
             InitializeComponent();
         }
 
@@ -54,14 +43,9 @@ namespace hanbat_project.CustomClass
             set { ClassName = value; classLbl.Text = value; }
         }
 
-        private void classLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
-            //Singleton.getInstance().openChrome(cookie, uri, classId);
+            new Selenium().openChrome(uri, classId);
         }
 
         public String _curTime

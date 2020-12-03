@@ -15,7 +15,7 @@ namespace hanbat_project.Strategy
         public override void method()
         {
             Uri _uri = new Uri("https://cyber.hanbat.ac.kr/User.do?cmd=loginUser");
-            String postData = "cmd=loginUser&userId=" + new Login().customTextbox1.val + "&password=" + new Login().customTextbox2.val + "";
+            String postData = "cmd=loginUser&userId=" + new LoginForm().customTextbox1.val + "&password=" + new LoginForm().customTextbox2.val + "";
 
             String html = new httpMethod("POST", _uri, postData).Method();
 

@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace hanbat_project
 {
-    public partial class Login : Form
+    public partial class LoginForm : Form
     {
 
         #region [ Gloval Variable ]
@@ -37,7 +37,7 @@ namespace hanbat_project
         #endregion
 
         #region [ Form Move ]
-        public Login()
+        public LoginForm()
         {
             InitializeComponent();
             MouseDown += (o, e) => { if (e.Button == MouseButtons.Left) { On = true; Pos = e.Location; } };
@@ -90,7 +90,7 @@ namespace hanbat_project
 
             if (login.result)
             {
-                new Main().Show();
+                new MainForm().Show();
                 this.Hide();
             }
             else
@@ -98,5 +98,9 @@ namespace hanbat_project
 
         }
 
+        private void Login_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

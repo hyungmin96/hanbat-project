@@ -25,7 +25,7 @@ namespace hanbat_project.Class
 
         #region [ take a class ]
 
-        public void openChrome(String _cookie, String _url, String _classId)
+        public void openChrome(String _url, String _classId)
         {
 
             int _driverNum;
@@ -48,9 +48,14 @@ namespace hanbat_project.Class
                 driver = new ChromeDriver(driverS, driver0);
             }
 
-            driver.Navigate().GoToUrl("http://cyber.hanbat.ac.kr/MLesson.do?cmd=viewStudyContentsForm&studyRecordDTO.lessonElementId=" + _url + "&courseDTO.courseId=" + _classId + "");
+            _url = "http://cyber.hanbat.ac.kr/MLesson.do?cmd=viewStudyContentsForm&studyRecordDTO.lessonElementId="
+                + _url + "&courseDTO.courseId=" + _classId + "";
 
-            driver.Manage().Cookies.AddCookie(new OpenQA.Selenium.Cookie("RSN_JSESSIONID", Regex.Split(Regex.Split(_cookie, "RSN_JSESSIONID=")[1], ";")[0]));
+            driver.Navigate().GoToUrl(_url);
+
+            driver.Manage().Cookies.AddCookie(new OpenQA.Selenium.Cookie("RSN_JSESSIONID",
+                                                Regex.Split(Regex.Split(Singleton.getInstance().getCookie().GetCookieHeader(new Uri(_url)),
+                                                "RSN_JSESSIONID=")[1], ";")[0]));
 
             driver.Navigate().Refresh();
 
@@ -70,47 +75,6 @@ namespace hanbat_project.Class
 
         #region [ Selenium Method ]
 
-        private void inputKeys(IWebElement element, String str, int delay1, int delay2)
-        {
-            char[] charArray = str.ToCharArray();
-            foreach (char word in charArray)
-            {
-                element.SendKeys(word.ToString());
-                DelayOp.Delay(DelayOp.GetRandomNumber(delay1, delay2));
-            }
-        }
-
-        public Tuple<String, String> waitNavigate(String Url)
-        {
-            if (driver.Url.ToString() != Url)
-            {
-                driver.Navigate().GoToUrl(Url);
-                waitElement();
-            }
-
-            return Tuple.Create(getCookies(), driver.PageSource);
-        }
-
-        public String getCookies()
-        {
-            int index = 0;
-            do
-            {
-
-                var info = driver.Manage().Cookies.AllCookies;
-                StringBuilder cinfo = new StringBuilder();
-                for (; index < info.Count - 1; index++)
-                {
-                    cinfo.Append(info[index].Name);
-                    cinfo.Append("=");
-                    cinfo.Append(info[index].Value);
-                    cinfo.Append("; ");
-                }
-                return cinfo.ToString();
-
-            } while (true);
-        }
-
         public void waitElement()
         {
             try
@@ -121,7 +85,7 @@ namespace hanbat_project.Class
 
             WebDriverWait waitForElement = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             waitForElement.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
-            DelayOp.Delay(3000);
+            Option.Delay(3000);
 
         }
 

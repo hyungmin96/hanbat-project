@@ -1,6 +1,6 @@
 ﻿namespace hanbat_project
 {
-    partial class Main
+    partial class MainForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -55,24 +55,11 @@
             this.button14 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.homePnl = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.customFrame3 = new WindowsFormsApp2.CustomControl.customFrame();
-            this.customComboBox1 = new FlattenCombo.CustomComboBox();
-            this.customComboBox6 = new FlattenCombo.CustomComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.customFrame1 = new WindowsFormsApp2.CustomControl.customFrame();
-            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label17 = new System.Windows.Forms.Label();
@@ -98,12 +85,23 @@
             this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.homePnl.SuspendLayout();
-            this.panel20.SuspendLayout();
             this.customFrame3.SuspendLayout();
             this.customFrame1.SuspendLayout();
             this.customFrame2.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel20.SuspendLayout();
             this.SuspendLayout();
             // 
             // columnHeader2
@@ -231,7 +229,7 @@
             this.button13.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button13.ForeColor = System.Drawing.Color.DarkGray;
             this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(990, 6);
+            this.button13.Location = new System.Drawing.Point(954, 6);
             this.button13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(35, 27);
@@ -250,7 +248,7 @@
             this.button14.ForeColor = System.Drawing.Color.DarkGray;
             this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
             this.button14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button14.Location = new System.Drawing.Point(958, 7);
+            this.button14.Location = new System.Drawing.Point(922, 7);
             this.button14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(35, 27);
@@ -286,112 +284,8 @@
             this.homePnl.Location = new System.Drawing.Point(-1, 41);
             this.homePnl.MinimumSize = new System.Drawing.Size(0, 50);
             this.homePnl.Name = "homePnl";
-            this.homePnl.Size = new System.Drawing.Size(1029, 709);
+            this.homePnl.Size = new System.Drawing.Size(993, 640);
             this.homePnl.TabIndex = 10496;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(31)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(1, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1028, 3);
-            this.panel6.TabIndex = 10501;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(1, 708);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1028, 1);
-            this.panel5.TabIndex = 10500;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel20.Controls.Add(this.panel21);
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1, 709);
-            this.panel20.TabIndex = 10491;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel21.Location = new System.Drawing.Point(0, 0);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(1, 2);
-            this.panel21.TabIndex = 10300;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1026, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 783);
-            this.panel4.TabIndex = 10497;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 783);
-            this.panel1.TabIndex = 10498;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(1, 782);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1025, 1);
-            this.panel2.TabIndex = 10499;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(1, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1025, 1);
-            this.panel3.TabIndex = 10500;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel7.Location = new System.Drawing.Point(195, 11);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(2, 22);
-            this.panel7.TabIndex = 10501;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(207, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 15);
-            this.label2.TabIndex = 10502;
-            this.label2.Text = "20187097(변형민) 님 안녕하세요";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(12, 761);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 12);
-            this.label6.TabIndex = 10503;
-            this.label6.Text = "오늘 날짜 : 2020-12-02";
             // 
             // customFrame3
             // 
@@ -403,73 +297,42 @@
             this.customFrame3._usePnl = true;
             this.customFrame3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.customFrame3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
-            this.customFrame3.Controls.Add(this.customComboBox1);
-            this.customFrame3.Controls.Add(this.customComboBox6);
+            this.customFrame3.Controls.Add(this.button1);
             this.customFrame3.Controls.Add(this.label8);
             this.customFrame3.Controls.Add(this.label5);
             this.customFrame3.FrameName = "customFrame";
-            this.customFrame3.Location = new System.Drawing.Point(34, 617);
+            this.customFrame3.Location = new System.Drawing.Point(34, 585);
             this.customFrame3.Name = "customFrame3";
-            this.customFrame3.Size = new System.Drawing.Size(479, 74);
+            this.customFrame3.Size = new System.Drawing.Size(479, 46);
             this.customFrame3.TabIndex = 10510;
             // 
-            // customComboBox1
+            // button1
             // 
-            this.customComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
-            this.customComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(48)))), ((int)(((byte)(49)))));
-            this.customComboBox1.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.customComboBox1.ButtonColor = System.Drawing.Color.Gray;
-            this.customComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.customComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customComboBox1.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.customComboBox1.ForeColor = System.Drawing.Color.Gray;
-            this.customComboBox1.FormattingEnabled = true;
-            this.customComboBox1.IntegralHeight = false;
-            this.customComboBox1.ItemHeight = 14;
-            this.customComboBox1.Items.AddRange(new object[] {
-            "영어/en",
-            "인도네시아/id",
-            "베트남/vi"});
-            this.customComboBox1.Location = new System.Drawing.Point(120, 41);
-            this.customComboBox1.Margin = new System.Windows.Forms.Padding(8, 5, 0, 0);
-            this.customComboBox1.Name = "customComboBox1";
-            this.customComboBox1.Size = new System.Drawing.Size(166, 22);
-            this.customComboBox1.TabIndex = 10512;
-            // 
-            // customComboBox6
-            // 
-            this.customComboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
-            this.customComboBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(48)))), ((int)(((byte)(49)))));
-            this.customComboBox6.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.customComboBox6.ButtonColor = System.Drawing.Color.Gray;
-            this.customComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.customComboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customComboBox6.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.customComboBox6.ForeColor = System.Drawing.Color.Gray;
-            this.customComboBox6.FormattingEnabled = true;
-            this.customComboBox6.IntegralHeight = false;
-            this.customComboBox6.ItemHeight = 14;
-            this.customComboBox6.Items.AddRange(new object[] {
-            "영어/en",
-            "인도네시아/id",
-            "베트남/vi"});
-            this.customComboBox6.Location = new System.Drawing.Point(108, 10);
-            this.customComboBox6.Margin = new System.Windows.Forms.Padding(8, 5, 0, 0);
-            this.customComboBox6.Name = "customComboBox6";
-            this.customComboBox6.Size = new System.Drawing.Size(166, 22);
-            this.customComboBox6.TabIndex = 10511;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(43)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(43)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.ForeColor = System.Drawing.Color.Gray;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(436, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 28);
+            this.button1.TabIndex = 10506;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("페이북 Bold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(15, 46);
+            this.label8.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label8.Location = new System.Drawing.Point(109, 16);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 13);
+            this.label8.Size = new System.Drawing.Size(27, 13);
             this.label8.TabIndex = 10504;
-            this.label8.Text = "오늘 과제 마감 목록 : ";
+            this.label8.Text = "0 건";
             // 
             // label5
             // 
@@ -477,7 +340,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("페이북 Bold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(15, 15);
+            this.label5.Location = new System.Drawing.Point(15, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 13);
             this.label5.TabIndex = 10503;
@@ -492,7 +355,6 @@
             this.customFrame1._title = "주차 별 수업 정보조회";
             this.customFrame1._usePnl = false;
             this.customFrame1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
-            this.customFrame1.Controls.Add(this.button1);
             this.customFrame1.Controls.Add(this.button4);
             this.customFrame1.Controls.Add(this.flowLayoutPanel1);
             this.customFrame1.Controls.Add(this.label17);
@@ -504,25 +366,10 @@
             this.customFrame1.Controls.Add(this.label13);
             this.customFrame1.Controls.Add(this.label14);
             this.customFrame1.FrameName = "customFrame";
-            this.customFrame1.Location = new System.Drawing.Point(576, 24);
+            this.customFrame1.Location = new System.Drawing.Point(553, 24);
             this.customFrame1.Name = "customFrame1";
-            this.customFrame1.Size = new System.Drawing.Size(416, 572);
+            this.customFrame1.Size = new System.Drawing.Size(416, 551);
             this.customFrame1.TabIndex = 10509;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(43)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(43)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.ForeColor = System.Drawing.Color.Gray;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(374, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 28);
-            this.button1.TabIndex = 10506;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -533,7 +380,7 @@
             this.button4.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button4.ForeColor = System.Drawing.Color.Gray;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(341, 14);
+            this.button4.Location = new System.Drawing.Point(372, 14);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(28, 28);
             this.button4.TabIndex = 10505;
@@ -543,7 +390,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 135);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 114);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(414, 434);
             this.flowLayoutPanel1.TabIndex = 10504;
@@ -661,7 +508,7 @@
             this.customFrame2.FrameName = "customFrame";
             this.customFrame2.Location = new System.Drawing.Point(34, 24);
             this.customFrame2.Name = "customFrame2";
-            this.customFrame2.Size = new System.Drawing.Size(479, 572);
+            this.customFrame2.Size = new System.Drawing.Size(479, 554);
             this.customFrame2.TabIndex = 10508;
             // 
             // panel8
@@ -748,10 +595,10 @@
             this.customListView2.FullRowSelect = true;
             this.customListView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.customListView2.HideSelection = false;
-            this.customListView2.Location = new System.Drawing.Point(0, 85);
+            this.customListView2.Location = new System.Drawing.Point(0, 90);
             this.customListView2.Name = "customListView2";
             this.customListView2.RowHeight = 45;
-            this.customListView2.Size = new System.Drawing.Size(477, 484);
+            this.customListView2.Size = new System.Drawing.Size(477, 461);
             this.customListView2.TabIndex = 10512;
             this.customListView2.UseCompatibleStateImageBehavior = false;
             this.customListView2.View = System.Windows.Forms.View.Details;
@@ -795,12 +642,116 @@
             // 
             this.columnHeader31.Width = 17;
             // 
-            // Main
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(31)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(1, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(992, 3);
+            this.panel6.TabIndex = 10501;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(1, 639);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(992, 1);
+            this.panel5.TabIndex = 10500;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel20.Controls.Add(this.panel21);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(1, 640);
+            this.panel20.TabIndex = 10491;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel21.Location = new System.Drawing.Point(0, 0);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(1, 2);
+            this.panel21.TabIndex = 10300;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(990, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 714);
+            this.panel4.TabIndex = 10497;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1, 714);
+            this.panel1.TabIndex = 10498;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(1, 713);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(989, 1);
+            this.panel2.TabIndex = 10499;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(1, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(989, 1);
+            this.panel3.TabIndex = 10500;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel7.Location = new System.Drawing.Point(195, 11);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(2, 22);
+            this.panel7.TabIndex = 10501;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label2.Location = new System.Drawing.Point(207, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(187, 15);
+            this.label2.TabIndex = 10502;
+            this.label2.Text = "20187097(변형민) 님 안녕하세요";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.Location = new System.Drawing.Point(11, 692);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(147, 12);
+            this.label6.TabIndex = 10503;
+            this.label6.Text = "오늘 날짜 : 2020-12-02";
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(1027, 783);
+            this.ClientSize = new System.Drawing.Size(991, 714);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel7);
@@ -813,11 +764,10 @@
             this.Controls.Add(this.button14);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Main";
+            this.Name = "MainForm";
             this.Text = "hanbat Class";
-            this.Load += new System.EventHandler(this.Main_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.homePnl.ResumeLayout(false);
-            this.panel20.ResumeLayout(false);
             this.customFrame3.ResumeLayout(false);
             this.customFrame3.PerformLayout();
             this.customFrame1.ResumeLayout(false);
@@ -825,6 +775,7 @@
             this.customFrame2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel20.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -884,7 +835,6 @@
         private System.Windows.Forms.Panel panel13;
         private WindowsFormsApp2.CustomControl.customFrame customFrame1;
         private WindowsFormsApp2.CustomControl.customFrame customFrame3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
@@ -893,14 +843,13 @@
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private FlattenCombo.CustomComboBox customComboBox6;
-        private FlattenCombo.CustomComboBox customComboBox1;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public System.Windows.Forms.Label label15;
         public System.Windows.Forms.Label label17;
         public System.Windows.Forms.Label label11;
         public System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label label8;
     }
 }
 

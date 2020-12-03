@@ -26,6 +26,11 @@ namespace hanbat_project.Class
             
         }
 
+        public void setCookie(CookieContainer _cook)
+        {
+            _container = _cook;
+        }
+
         public CookieContainer getCookie()
         {
             return _container;
