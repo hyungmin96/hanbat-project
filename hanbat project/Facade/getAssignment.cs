@@ -41,7 +41,7 @@ namespace hanbat_project.Facade
 
                     String _value = Regex.Replace(_class.Trim(), "&nbsp;", String.Empty);
 
-                    if (_value.Contains("javascript:submitReport") && (_value.Contains("[진행중]") || _value.Contains("미제출")))
+                    if (_value.Contains("javascript:submitReport") && (_value.Contains("[진행중]") && !_value.Contains("제출완료")))
                     {
 
                         String _title = Regex.Split(_value, "\n")[0];
@@ -64,6 +64,9 @@ namespace hanbat_project.Facade
                     }
 
                 }
+
+                if (_dict[_item.SubItems[4].Text] == null || _dict[_item.SubItems[4].Text].Count < 1) 
+                    _dict.Remove(_item.SubItems[4].Text);
 
                 MainForm.main.label8.Text = Convert.ToString(_number) + "건";
 
