@@ -10,20 +10,14 @@ using WindowsFormsApp2.Class;
 
 namespace hanbat_project.Class
 {
-    public class Selenium
+    public class takeClass
     {
 
         public IWebDriver driver = null;
         private ChromeDriverService driverS;
         private ChromeOptions driver0;
 
-        #region [ Constructor ]
-
-        public Selenium() { }
-
-        #endregion
-
-        #region [ take a class ]
+        public takeClass() { }
 
         public void openChrome(String _url, String _classId)
         {
@@ -44,7 +38,6 @@ namespace hanbat_project.Class
                 driver0.AddAdditionalCapability("useAutomationExtension", false);
                 driver0.AddArgument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36");
                 driver0.AddArguments("--window-size=1000,1000");
-                driver0.AddArguments("--user-data-dir=C:\\Users\\" + GetUserName() + "\\AppData\\Local\\Google\\Chrome\\User Data\\");
                 driver = new ChromeDriver(driverS, driver0);
             }
 
@@ -63,40 +56,13 @@ namespace hanbat_project.Class
 
             Actions action = new Actions(driver);
 
-            waitElement();
+            Option.Delay(2000);
 
             IWebElement playbtn = driver.FindElement(By.XPath("//*[@id=\"movie_player\"]/div[4]/button"));
 
             action.MoveToElement(playbtn).Click(playbtn).Perform();
 
         }
-
-        #endregion
-
-        #region [ Selenium Method ]
-
-        public void waitElement()
-        {
-            try
-            {
-                driver.SwitchTo().Alert().Dismiss();
-            }
-            catch (Exception ex) { }
-
-            WebDriverWait waitForElement = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            waitForElement.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
-            Option.Delay(3000);
-
-        }
-
-        private String GetUserName()
-        {
-            String str = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-            string[] result = str.Split(new string[] { "\\" }, StringSplitOptions.None);
-            return result[1];
-        }
-
-        #endregion
 
     }
 

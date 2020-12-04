@@ -293,6 +293,7 @@
             this.button2.Size = new System.Drawing.Size(28, 28);
             this.button2.TabIndex = 10508;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // linkLabel1
             // 
@@ -304,6 +305,7 @@
             this.linkLabel1.TabIndex = 10511;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "linkLabel1";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label3
             // 

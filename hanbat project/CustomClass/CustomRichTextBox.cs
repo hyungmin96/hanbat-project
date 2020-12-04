@@ -22,7 +22,7 @@ namespace aiswing_product.CustomControl
         public String setValue
         {
             get { return this.richTextBox1.Text; }
-            set { content = value; richTextBox1.Text = value; }
+            set { richTextBox1.Text = null;  content = value; richTextBox1.Text = value; }
         }
 
         private void panel7_Paint(object sender, PaintEventArgs e)

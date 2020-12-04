@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using WindowsFormsApp2.Class;
 
 namespace hanbat_project.Facade
 {
@@ -44,7 +45,7 @@ namespace hanbat_project.Facade
                     {
 
                         String _title = Regex.Split(_value, "\n")[0];
-                        String _content = Regex.Split(Regex.Split(_value, "<div class=\"cont pb0\" style=\"min-height:0;word-break:break-all;\">")[1], "</div>")[0];
+                        String _content = Option.StripHTML(Regex.Split(Regex.Split(_value, "<div class=\"cont pb0\" style=\"min-height:0;word-break:break-all;\">")[1], "</div>")[0].Trim());
                         String _date = Regex.Split(Regex.Split(Regex.Split(_value, "<td>")[1], "~ ")[1], "</td>")[0].Trim();
                        
                         if (_value.Contains("title='Download: "))

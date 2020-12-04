@@ -8,14 +8,14 @@ namespace hanbat_project.Class
     public class s_Singleton
     {
 
-        public static Selenium Instance = null;
+        public static takeClass Instance = null;
 
         private s_Singleton() { }
 
-        public static Selenium getInstance()
+        public static takeClass getInstance()
         {
             if (Instance == null)
-                Instance = new Selenium();
+                Instance = new takeClass();
 
             return Instance;
         }

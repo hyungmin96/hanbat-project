@@ -87,7 +87,7 @@
     <Compile Include="Forms\BoardForm.Designer.cs">
       <DependentUpon>BoardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SingleTon\Selenium.cs" />
+    <Compile Include="SingleTon\takeClass.cs" />
     <Compile Include="SingleTon\s_Singleton.cs" />
     <Compile Include="SingleTon\Singleton.cs" />
     <Compile Include="CustomClass\CustomButton.cs">
