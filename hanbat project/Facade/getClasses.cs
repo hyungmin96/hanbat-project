@@ -1,18 +1,11 @@
-﻿using hanbat_project.Class;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
+﻿using System;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using hanbat_project.Strategy;
 
 namespace hanbat_project.Facade
 {
     public class getClasses
     {
-
 
         public getClasses() { }
 
@@ -21,11 +14,10 @@ namespace hanbat_project.Facade
 
             Uri _uri = new Uri("http://cyber.hanbat.ac.kr/Main.do?cmd=viewHome");
 
-            Class.HttpWebRequestClass http = new Class.HttpWebRequestClass("GET", _uri);
+            setGet setget = new setGet();
+            setget.method(new setHttpProtocol(_uri));
 
-            String html = http.Method();
-
-            foreach (String _class in html.Split(new String[] { "<option value = '" }, StringSplitOptions.RemoveEmptyEntries))
+            foreach (String _class in setget._html.Split(new String[] { "<option value = '" }, StringSplitOptions.RemoveEmptyEntries))
             {
                 if (!(_class.Contains("강의실 선택") || _class.Contains("한밭대학교 이러닝 캠퍼스")))
                 {

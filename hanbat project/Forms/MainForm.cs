@@ -2,6 +2,7 @@
 using hanbat_project.Class;
 using hanbat_project.CustomClass;
 using hanbat_project.Facade;
+using hanbat_project.Strategy;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -118,10 +119,7 @@ namespace hanbat_project
 
             _classId = customListView2.FocusedItem.SubItems[5].Text;
 
-            Strategy.Context context;
-
-            context = new Strategy.Context(new Strategy.displayClasses());
-            context.methodExecute();
+            new displayClasses().getClassedList();
 
             currentPage = _dict.Count - 1;
 
@@ -189,13 +187,9 @@ namespace hanbat_project
         private void button4_Click(object sender, EventArgs e)
         {
 
-            Strategy.getNotice notice = new Strategy.getNotice();
+            new getNotice().getNoticeList();
 
-            Strategy.Context context = new Strategy.Context(notice);
-
-            context.methodExecute();
-
-            new Board(notice._dict).ShowDialog();
+            new Board(getNotice._dict).ShowDialog();
 
         }
 

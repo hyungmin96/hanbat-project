@@ -7,14 +7,14 @@ using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using WindowsFormsApp2.Class;
+using hanbat_project.Strategy;
 
 namespace hanbat_project.Strategy
 {
-    public class displayClasses : httpMethod
+    public class displayClasses
     {
 
-        public override void method()
+        public void getClassedList()
         {
 
             MainForm._dict.Clear();
@@ -23,9 +23,10 @@ namespace hanbat_project.Strategy
 
             Uri _uri = new Uri("http://cyber.hanbat.ac.kr/MCourse.do?cmd=viewStudyHome&courseDTO.courseId=" + _classNum + "&boardInfoDTO.boardInfoGubun=study_home&boardGubun=study_course&gubun=study_course");
 
-            String html = new HttpWebRequestClass("GET", _uri).Method();
+            setGet setget = new setGet();
+            setget.method(new setHttpProtocol(_uri));
 
-            foreach (String _date in html.Split(new String[] { "icon-time mr5" }, StringSplitOptions.RemoveEmptyEntries))
+            foreach (String _date in setget._html.Split(new String[] { "icon-time mr5" }, StringSplitOptions.RemoveEmptyEntries))
             {
 
                 if (_date.Contains("boxTable"))
@@ -46,7 +47,7 @@ namespace hanbat_project.Strategy
                         {
 
                             String _Uri = Regex.Split(Regex.Split(_info, "'")[1], "'")[0];
-                            String _name = Option.StripHTML(Regex.Split(Regex.Split(_info, "<li><span class=\"fcBluesky\">")[1], "</li>")[0]);
+                            String _name = WindowsFormsApp2.Class.Option.StripHTML(Regex.Split(Regex.Split(_info, "<li><span class=\"fcBluesky\">")[1], "</li>")[0]);
 
                             String _curTime;
                             String _endTime;

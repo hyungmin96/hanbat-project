@@ -1,4 +1,5 @@
 ﻿using hanbat_project.dataClass;
+using hanbat_project.Strategy;
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -16,7 +17,7 @@ namespace hanbat_project.Facade
 
         public getAssignment() { }
 
-        public void getAssignmentMethod()
+        public void getAssignmentList()
         {
 
             foreach (ListViewItem _item in MainForm.main.customListView2.Items)
@@ -26,15 +27,16 @@ namespace hanbat_project.Facade
 
                 Uri _uri = new Uri("http://cyber.hanbat.ac.kr/Report.do?cmd=viewReportInfoPageList&boardInfoDTO.boardInfoGubun=report&courseDTO.courseId=" + _classId + "&mainDTO.parentMenuId=menu_00104&mainDTO.menuId=menu_00063");
 
-                String html = new Class.HttpWebRequestClass("GET", _uri).Method();
+                setGet setget = new setGet();
+                setget.method(new setHttpProtocol(_uri));
 
                 _dict.Add(_item.SubItems[4].Text, null);
 
                 List<AssignmentData> _lst = new List<AssignmentData>();
 
-                String courseId = Regex.Split(Regex.Split(html, "study_home&courseDTO.courseId=")[1], "\"")[0];
+                String courseId = Regex.Split(Regex.Split(setget._html, "study_home&courseDTO.courseId=")[1], "\"")[0];
 
-                foreach (String _class in html.Split(new String[] { "<i class=\"icon-openbook-color mr10\"></i>" }, StringSplitOptions.RemoveEmptyEntries))
+                foreach (String _class in setget._html.Split(new String[] { "<i class=\"icon-openbook-color mr10\"></i>" }, StringSplitOptions.RemoveEmptyEntries))
                 {
 
                     String f_name = null, file = null;

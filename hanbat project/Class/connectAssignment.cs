@@ -1,4 +1,5 @@
 ﻿using System;
+using hanbat_project.Strategy;
 
 namespace hanbat_project.Class
 {
@@ -23,7 +24,8 @@ namespace hanbat_project.Class
                 "&reportInfoDTO.reportInfoId=" + reportId + "&reportInfoDTO.randomYn=N&boardInfoDTO.boardInfoGubun=report" +
                 "&reportSubmitDTO.submitId=" + LoginForm.loginForm.customTextbox1.val  + "&appGubun=";
 
-            String html = new HttpWebRequestClass("POST", _uri, postData).Method();
+            setPost setpost = new setPost();
+            setpost.method(new setHttpProtocol(_uri, postData));
 
         }
 

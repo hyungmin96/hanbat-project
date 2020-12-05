@@ -72,10 +72,10 @@
     <Compile Include="Class\Option.cs" />
     <Compile Include="Class\uploadFile.cs" />
     <Compile Include="dataClass\AssignmentData.cs" />
-    <Compile Include="Strategy\getAssignment.cs" />
+    <Compile Include="Facade\getAssignment.cs" />
     <Compile Include="Facade\getDate.cs" />
     <Compile Include="Facade\getIdInfo.cs" />
-    <Compile Include="Strategy\getClasses.cs" />
+    <Compile Include="Facade\getClasses.cs" />
     <Compile Include="Facade\Facade.cs" />
     <Compile Include="Forms\AssignmentForm.cs">
       <SubType>Form</SubType>
@@ -165,11 +165,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strategy\getContent.cs" />
-    <Compile Include="Strategy\httpLogin.cs" />
-    <Compile Include="Strategy\setSystem.cs" />
+    <Compile Include="Strategy\setHttpProtocol.cs" />
     <Compile Include="Strategy\displayClasses.cs" />
     <Compile Include="Strategy\getNotice.cs" />
-    <Compile Include="Strategy\HttpWebRequestClass.cs" />
     <Compile Include="Strategy\httpMethod.cs" />
     <EmbeddedResource Include="CustomClass\CustomButton.resx">
       <DependentUpon>CustomButton.cs</DependentUpon>

@@ -2,6 +2,7 @@
 using hanbat_project.Class;
 using hanbat_project.CustomClass;
 using hanbat_project.Facade;
+using hanbat_project.Strategy;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -99,9 +100,7 @@ namespace hanbat_project
 
             label3.Text = customListView2.FocusedItem.SubItems[2].Text;
 
-            Strategy.setSystem context = new Strategy.setSystem();
-            context.setFomular(new Strategy.getContent());
-            context.methodExecute();
+            new getContent().get_Content();
 
         }
     }

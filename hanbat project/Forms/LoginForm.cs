@@ -1,8 +1,7 @@
-﻿using hanbat_project.Class;
+﻿using hanbat_project.Strategy;
 using System;
 using System.Diagnostics;
 using System.Drawing;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace hanbat_project
@@ -76,15 +75,15 @@ namespace hanbat_project
         private void button2_Click(object sender, EventArgs e)
         {
 
-            Strategy.httpLogin login = new Strategy.httpLogin();
+            Uri _uri = new Uri("https://cyber.hanbat.ac.kr/User.do?cmd=loginUser");
+            String postData = "cmd=loginUser&userId=" + new LoginForm().customTextbox1.val + "&password=" + new LoginForm().customTextbox2.val + "";
 
-            Strategy.Context context = new Strategy.Context(login);
+            setHttpProtocol protocol = new setHttpProtocol(_uri, postData, false, "한밭대학교, 사이버캠퍼스입니다");
+            returnResult _result = new returnResult();
+            _result.method(protocol);
 
-            context.methodExecute();
-
-            if (login.result)
+            if (_result._result)
             {
-                new uploadFile().uploadMethod();
                 new MainForm().Show();
                 this.Hide();
             }

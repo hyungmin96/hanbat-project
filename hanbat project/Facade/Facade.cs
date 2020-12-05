@@ -23,7 +23,7 @@ namespace hanbat_project.Facade
             getclass.getClassList();
             getIdInfo.getInfo();
             GetDate.getDateMethod();
-            getAssignment.getAssignmentMethod();
+            getAssignment.getAssignmentList();
         }
 
     }
