@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace hanbat_project.Class
 {
-    public class httpMethod
+    public class HttpWebRequestClass
     {
 
         String _method, _postData;
         Uri _uri;
 
-        public httpMethod(String _method, Uri _uri, String _postData = "")
+        public HttpWebRequestClass(String _method, Uri _uri, String _postData = "")
         {
             this._method = _method;
             this._postData = _postData;

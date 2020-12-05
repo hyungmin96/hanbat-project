@@ -26,13 +26,13 @@ namespace hanbat_project.Facade
 
                 Uri _uri = new Uri("http://cyber.hanbat.ac.kr/Report.do?cmd=viewReportInfoPageList&boardInfoDTO.boardInfoGubun=report&courseDTO.courseId=" + _classId + "&mainDTO.parentMenuId=menu_00104&mainDTO.menuId=menu_00063");
 
-                Class.httpMethod http = new Class.httpMethod("GET", _uri);
-
-                String html = http.Method();
+                String html = new Class.HttpWebRequestClass("GET", _uri).Method();
 
                 _dict.Add(_item.SubItems[4].Text, null);
 
                 List<AssignmentData> _lst = new List<AssignmentData>();
+
+                String courseId = Regex.Split(Regex.Split(html, "study_home&courseDTO.courseId=")[1], "\"")[0];
 
                 foreach (String _class in html.Split(new String[] { "<i class=\"icon-openbook-color mr10\"></i>" }, StringSplitOptions.RemoveEmptyEntries))
                 {
@@ -47,6 +47,7 @@ namespace hanbat_project.Facade
                         String _title = Regex.Split(_value, "\n")[0];
                         String _content = Option.StripHTML(Regex.Split(Regex.Split(_value, "<div class=\"cont pb0\" style=\"min-height:0;word-break:break-all;\">")[1], "</div>")[0].Trim());
                         String _date = Regex.Split(Regex.Split(Regex.Split(_value, "<td>")[1], "~ ")[1], "</td>")[0].Trim();
+                        String _reportUri = Regex.Split(Regex.Split(Regex.Split(_value, "submitReport")[1], "'")[1], "'")[0].Trim();
                        
                         if (_value.Contains("title='Download: "))
                         {
@@ -54,7 +55,7 @@ namespace hanbat_project.Facade
                             file = Regex.Replace(Regex.Split(_value, "fileDownload")[1].Split('(', ')')[1], "'", String.Empty);
                         }
 
-                        AssignmentData data = new AssignmentData(_title, _content, _date, f_name, file);
+                        AssignmentData data = new AssignmentData(courseId, _title, _content, _date, _reportUri, f_name, file);
                         _lst.Add(data);
 
                         _dict[_item.SubItems[4].Text] = _lst;
@@ -68,7 +69,7 @@ namespace hanbat_project.Facade
                 if (_dict[_item.SubItems[4].Text] == null || _dict[_item.SubItems[4].Text].Count < 1) 
                     _dict.Remove(_item.SubItems[4].Text);
 
-                MainForm.main.label8.Text = Convert.ToString(_number) + "건";
+                MainForm.main.label8.Text = Convert.ToString(_number - 1) + "건";
 
             }
 

@@ -20,7 +20,7 @@ namespace hanbat_project.Facade
 
             Uri _uri = new Uri("http://cyber.hanbat.ac.kr/Main.do?cmd=viewHome&userDTO.localeKey=ko");
 
-            String html = new Class.httpMethod("GET", _uri).Method();
+            String html = new Class.HttpWebRequestClass("GET", _uri).Method();
 
             MainForm.main.label2.Text = Regex.Replace(Regex.Split(Regex.Split(html, "<p class=\"mt5\"><span>")[1], "</p>")[0], "</span>", String.Empty);
 

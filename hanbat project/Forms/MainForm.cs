@@ -196,6 +196,7 @@ namespace hanbat_project
             context.methodExecute();
 
             new Board(notice._dict).ShowDialog();
+
         }
 
         private void button1_Click(object sender, EventArgs e)

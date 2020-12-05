@@ -11,7 +11,7 @@ using WindowsFormsApp2.Class;
 
 namespace hanbat_project.Strategy
 {
-    public class displayClasses : StrategyClass
+    public class displayClasses : httpMethod
     {
 
         public override void method()
@@ -23,7 +23,7 @@ namespace hanbat_project.Strategy
 
             Uri _uri = new Uri("http://cyber.hanbat.ac.kr/MCourse.do?cmd=viewStudyHome&courseDTO.courseId=" + _classNum + "&boardInfoDTO.boardInfoGubun=study_home&boardGubun=study_course&gubun=study_course");
 
-            String html = new httpMethod("GET", _uri).Method();
+            String html = new HttpWebRequestClass("GET", _uri).Method();
 
             foreach (String _date in html.Split(new String[] { "icon-time mr5" }, StringSplitOptions.RemoveEmptyEntries))
             {

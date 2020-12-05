@@ -9,15 +9,23 @@ namespace hanbat_project.dataClass
     public class AssignmentData
     {
 
-        String title, content, date, f_name, uri;
+        String courseId, title, content, date, reportUri, f_name, uri;
 
-        public AssignmentData(String title, String content, String date, String f_name, String uri)
+        public AssignmentData(String courseId, String title, String content, String date, String reportUri, String f_name, String uri)
         {
+            this.courseId = courseId;
             this.title = title;
             this.content = content;
             this.date = date;
+            this.reportUri = reportUri;
             this.f_name = f_name;
             this.uri = uri;
+        }
+
+        public String _courseId
+        {
+            get { return courseId; }
+            set { courseId = value; }
         }
 
         public String _title
@@ -41,6 +49,12 @@ namespace hanbat_project.dataClass
         {
             get { return f_name; }
             set { f_name = value; }
+        }      
+
+        public String _reportUri
+        {
+            get { return reportUri; }
+            set { reportUri = value; }
         }
 
         public String _uri

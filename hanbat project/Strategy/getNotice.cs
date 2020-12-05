@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace hanbat_project.Strategy
 {
-    public class getNotice : StrategyClass
+    public class getNotice : httpMethod
     {
 
         public static String BoardId;
@@ -20,13 +20,13 @@ namespace hanbat_project.Strategy
 
             Uri _uri = new Uri("http://cyber.hanbat.ac.kr/MCourse.do?cmd=viewStudyHome&courseDTO.courseId=" + _classNum  + "&boardInfoDTO.boardInfoGubun=study_home&boardGubun=study_course&gubun=study_course");
 
-            String html = new httpMethod("GET", _uri).Method();
+            String html = new HttpWebRequestClass("GET", _uri).Method();
 
             BoardId = Regex.Split(Regex.Split(html, "boardInfoGubun=notice&boardInfoDTO.boardInfoId=")[1], "&")[0];
 
             _uri = new Uri("http://cyber.hanbat.ac.kr/MCourse.do?cmd=mviewBoardContentsList&boardInfoDTO.boardInfoGubun=notice&boardInfoDTO.boardInfoId=" + BoardId + "&boardInfoDTO.boardClass=notice&boardInfoDTO.boardType=course&courseDTO.courseId=" + _classNum);
 
-            html = new httpMethod("GET", _uri).Method();
+            html = new HttpWebRequestClass("GET", _uri).Method();
 
             foreach (String _notice in html.Split(new String[] { "<li class=\"aa\" >" }, StringSplitOptions.RemoveEmptyEntries))
             {

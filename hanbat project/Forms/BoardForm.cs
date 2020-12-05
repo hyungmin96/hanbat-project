@@ -99,8 +99,10 @@ namespace hanbat_project
 
             label3.Text = customListView2.FocusedItem.SubItems[2].Text;
 
-            Strategy.Context context = new Strategy.Context(new Strategy.getContent());
+            Strategy.setSystem context = new Strategy.setSystem();
+            context.setFomular(new Strategy.getContent());
             context.methodExecute();
+
         }
     }
 

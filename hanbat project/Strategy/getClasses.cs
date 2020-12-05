@@ -21,7 +21,7 @@ namespace hanbat_project.Facade
 
             Uri _uri = new Uri("http://cyber.hanbat.ac.kr/Main.do?cmd=viewHome");
 
-            Class.httpMethod http = new Class.httpMethod("GET", _uri);
+            Class.HttpWebRequestClass http = new Class.HttpWebRequestClass("GET", _uri);
 
             String html = http.Method();
 

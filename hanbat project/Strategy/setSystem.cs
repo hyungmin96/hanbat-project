@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace hanbat_project.Strategy
 {
-    public class Context
+    public class setSystem
     {
 
-        public StrategyClass _strategy;
+        private httpMethod _strategy;
         public bool _result;
 
-        public Context(StrategyClass _strategy)
+        public void setFomular(httpMethod _strategy)
         {
             this._strategy = _strategy;
         }

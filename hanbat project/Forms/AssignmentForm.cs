@@ -23,9 +23,7 @@ namespace hanbat_project
 
         private Point Pos;
 
-        public static Board board;
-
-        public static String BoardId;
+        public static AssignmentForm assignmentForm;
 
         Dictionary<String, List<AssignmentData>> _dict;
 
@@ -151,6 +149,10 @@ namespace hanbat_project
         private void button2_Click(object sender, EventArgs e)
         {
 
+            String _courseId = _dict[customComboBox1.Text][customListView2.FocusedItem.Index]._courseId;
+            String _reportId = _dict[customComboBox1.Text][customListView2.FocusedItem.Index]._reportUri;
+
+            new connectAssignment(_courseId, _reportId).Method();
         }
     }
 

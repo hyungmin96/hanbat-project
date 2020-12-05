@@ -7,7 +7,7 @@ using WindowsFormsApp2.Class;
 
 namespace hanbat_project.Strategy
 {
-    public class getContent : StrategyClass
+    public class getContent : httpMethod
     {
 
         public override void method()
@@ -22,7 +22,7 @@ namespace hanbat_project.Strategy
 
             Uri _uri = new Uri("http://cyber.hanbat.ac.kr/MCourse.do");
 
-            String html = new httpMethod("POST", _uri, postData).Method();
+            String html = new HttpWebRequestClass("POST", _uri, postData).Method();
 
             String _subject = Regex.Split(Regex.Split(html, "목록</a>")[1], "<ul class=\"comm_file\">")[0];
 

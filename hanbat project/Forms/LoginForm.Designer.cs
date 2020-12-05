@@ -194,13 +194,13 @@
             this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button13.ForeColor = System.Drawing.Color.DarkGray;
             this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(260, 4);
-            this.button13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button13.Location = new System.Drawing.Point(297, 5);
+            this.button13.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(35, 27);
+            this.button13.Size = new System.Drawing.Size(40, 34);
             this.button13.TabIndex = 10494;
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button13.UseVisualStyleBackColor = false;
@@ -211,14 +211,14 @@
             this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.button14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button14.ForeColor = System.Drawing.Color.DarkGray;
             this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
             this.button14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button14.Location = new System.Drawing.Point(228, 5);
-            this.button14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button14.Location = new System.Drawing.Point(261, 6);
+            this.button14.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(35, 27);
+            this.button14.Size = new System.Drawing.Size(40, 34);
             this.button14.TabIndex = 10493;
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button14.UseVisualStyleBackColor = false;
@@ -227,11 +227,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(10, 12);
+            this.label1.Location = new System.Drawing.Point(11, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 17);
+            this.label1.Size = new System.Drawing.Size(55, 24);
             this.label1.TabIndex = 10491;
             this.label1.Text = "로그인";
             // 
@@ -249,10 +249,11 @@
             this.homePnl.Controls.Add(this.panel6);
             this.homePnl.Controls.Add(this.panel5);
             this.homePnl.Controls.Add(this.panel20);
-            this.homePnl.Location = new System.Drawing.Point(-1, 40);
-            this.homePnl.MinimumSize = new System.Drawing.Size(0, 50);
+            this.homePnl.Location = new System.Drawing.Point(-1, 50);
+            this.homePnl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.homePnl.MinimumSize = new System.Drawing.Size(0, 62);
             this.homePnl.Name = "homePnl";
-            this.homePnl.Size = new System.Drawing.Size(300, 128);
+            this.homePnl.Size = new System.Drawing.Size(343, 160);
             this.homePnl.TabIndex = 10496;
             // 
             // button2
@@ -265,9 +266,10 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button2.ForeColor = System.Drawing.Color.Silver;
-            this.button2.Location = new System.Drawing.Point(23, 82);
+            this.button2.Location = new System.Drawing.Point(26, 102);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(259, 30);
+            this.button2.Size = new System.Drawing.Size(296, 38);
             this.button2.TabIndex = 10506;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -275,11 +277,11 @@
             // 
             this.customTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
             this.customTextbox2.hint = "gosemvhs135!!";
-            this.customTextbox2.Location = new System.Drawing.Point(78, 49);
+            this.customTextbox2.Location = new System.Drawing.Point(89, 61);
             this.customTextbox2.Margin = new System.Windows.Forms.Padding(0);
             this.customTextbox2.MultiLine = false;
             this.customTextbox2.Name = "customTextbox2";
-            this.customTextbox2.Size = new System.Drawing.Size(204, 24);
+            this.customTextbox2.Size = new System.Drawing.Size(233, 30);
             this.customTextbox2.TabIndex = 10505;
             this.customTextbox2.usePWchar = true;
             this.customTextbox2.val = "gosemvhs135!!";
@@ -288,11 +290,11 @@
             // 
             this.customTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
             this.customTextbox1.hint = "20187097";
-            this.customTextbox1.Location = new System.Drawing.Point(78, 12);
+            this.customTextbox1.Location = new System.Drawing.Point(89, 15);
             this.customTextbox1.Margin = new System.Windows.Forms.Padding(0);
             this.customTextbox1.MultiLine = false;
             this.customTextbox1.Name = "customTextbox1";
-            this.customTextbox1.Size = new System.Drawing.Size(204, 24);
+            this.customTextbox1.Size = new System.Drawing.Size(233, 30);
             this.customTextbox1.TabIndex = 10504;
             this.customTextbox1.usePWchar = false;
             this.customTextbox1.val = "20187097";
@@ -303,9 +305,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(20, 55);
+            this.label2.Location = new System.Drawing.Point(23, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 15);
+            this.label2.Size = new System.Drawing.Size(74, 19);
             this.label2.TabIndex = 10503;
             this.label2.Text = "비밀번호 :";
             // 
@@ -315,9 +317,9 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label16.ForeColor = System.Drawing.Color.DimGray;
-            this.label16.Location = new System.Drawing.Point(42, 18);
+            this.label16.Location = new System.Drawing.Point(48, 22);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 15);
+            this.label16.Size = new System.Drawing.Size(47, 19);
             this.label16.TabIndex = 10502;
             this.label16.Text = "학번 :";
             // 
@@ -326,17 +328,19 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(1, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(299, 1);
+            this.panel6.Size = new System.Drawing.Size(342, 1);
             this.panel6.TabIndex = 10501;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(1, 127);
+            this.panel5.Location = new System.Drawing.Point(1, 159);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(299, 1);
+            this.panel5.Size = new System.Drawing.Size(342, 1);
             this.panel5.TabIndex = 10500;
             // 
             // panel20
@@ -345,8 +349,9 @@
             this.panel20.Controls.Add(this.panel21);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1, 128);
+            this.panel20.Size = new System.Drawing.Size(1, 160);
             this.panel20.TabIndex = 10491;
             // 
             // panel21
@@ -354,6 +359,7 @@
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel21.Location = new System.Drawing.Point(0, 0);
+            this.panel21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(1, 2);
             this.panel21.TabIndex = 10300;
@@ -362,9 +368,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(297, 0);
+            this.panel4.Location = new System.Drawing.Point(340, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 193);
+            this.panel4.Size = new System.Drawing.Size(1, 241);
             this.panel4.TabIndex = 10497;
             // 
             // panel1
@@ -372,17 +379,19 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 193);
+            this.panel1.Size = new System.Drawing.Size(1, 241);
             this.panel1.TabIndex = 10498;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(1, 192);
+            this.panel2.Location = new System.Drawing.Point(1, 240);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(296, 1);
+            this.panel2.Size = new System.Drawing.Size(339, 1);
             this.panel2.TabIndex = 10499;
             // 
             // panel3
@@ -390,16 +399,17 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(1, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(296, 1);
+            this.panel3.Size = new System.Drawing.Size(339, 1);
             this.panel3.TabIndex = 10500;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(298, 193);
+            this.ClientSize = new System.Drawing.Size(341, 241);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -409,8 +419,10 @@
             this.Controls.Add(this.button14);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LoginForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.homePnl.ResumeLayout(false);
             this.homePnl.PerformLayout();
             this.panel20.ResumeLayout(false);
