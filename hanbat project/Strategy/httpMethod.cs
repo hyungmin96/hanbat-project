@@ -17,6 +17,7 @@ namespace hanbat_project.Strategy
         public override void method(string uri, string postData = null)
         {
             _result = new HttpWebRequestClass("POST", new Uri(uri), postData).Method();
+
         }
     }
 
