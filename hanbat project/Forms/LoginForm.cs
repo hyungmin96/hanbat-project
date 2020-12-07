@@ -76,7 +76,7 @@ namespace hanbat_project
         {
 
             Uri _uri = new Uri("https://cyber.hanbat.ac.kr/User.do?cmd=loginUser");
-            String postData = "cmd=loginUser&userId=" + new LoginForm().customTextbox1.val + "&password=" + new LoginForm().customTextbox2.val + "";
+            String postData = "cmd=loginUser&userId=" + customTextbox1.val + "&password=" + customTextbox2.val + "";
 
             setHttpProtocol protocol = new setHttpProtocol(_uri, postData, false, "한밭대학교, 사이버캠퍼스입니다");
             returnResult _result = new returnResult();

@@ -16,16 +16,20 @@ namespace hanbat_project.Strategy
         public void getNoticeList()
         {
 
+            _dict.Clear();
+
             String _classNum = MainForm.main.customListView2.FocusedItem.SubItems[5].Text;
 
-            Uri _uri = new Uri("http://cyber.hanbat.ac.kr/MCourse.do?cmd=viewStudyHome&courseDTO.courseId=" + _classNum  + "&boardInfoDTO.boardInfoGubun=study_home&boardGubun=study_course&gubun=study_course");
+            Uri _uri = new Uri("http://cyber.hanbat.ac.kr/MCourse.do?cmd=viewStudyHome&courseDTO.courseId=" + _classNum  + "&" +
+                "               boardInfoDTO.boardInfoGubun=study_home&boardGubun=study_course&gubun=study_course");
 
             setGet setget = new setGet();
             setget.method(new setHttpProtocol(_uri));
 
             BoardId = Regex.Split(Regex.Split(setget._html, "boardInfoGubun=notice&boardInfoDTO.boardInfoId=")[1], "&")[0];
 
-            _uri = new Uri("http://cyber.hanbat.ac.kr/MCourse.do?cmd=mviewBoardContentsList&boardInfoDTO.boardInfoGubun=notice&boardInfoDTO.boardInfoId=" + BoardId + "&boardInfoDTO.boardClass=notice&boardInfoDTO.boardType=course&courseDTO.courseId=" + _classNum);
+            _uri = new Uri("http://cyber.hanbat.ac.kr/MCourse.do?cmd=mviewBoardContentsList&boardInfoDTO.boardInfoGubun=notice&boardInfoDTO.boardInfoId=" + BoardId + "" +
+                "&boardInfoDTO.boardClass=notice&boardInfoDTO.boardType=course&courseDTO.courseId=" + _classNum);
 
             setget = new setGet();
             setget.method(new setHttpProtocol(_uri));

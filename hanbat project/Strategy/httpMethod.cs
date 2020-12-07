@@ -61,7 +61,7 @@ namespace hanbat_project.Strategy
             postReq.Method = _method;
             postReq.ContentType = "application/x-www-form-urlencoded";
             postReq.UserAgent = "Mozilla/5.0 (Linux; Android 9.0; MI 8 SE) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.119 Mobile Safari/537.36";
-            postReq.Referer = "http://cyber.hanbat.ac.kr/";
+            postReq.Referer = "http://cyber.hanbat.ac.kr/Report.do";
             postReq.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9";
             postReq.ContentLength = byteData.Length;
             postReq.CookieContainer = Singleton.getInstance().getCookie();

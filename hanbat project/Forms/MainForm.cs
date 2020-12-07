@@ -1,15 +1,13 @@
 ﻿using ExtendedControls;
-using hanbat_project.Class;
 using hanbat_project.CustomClass;
 using hanbat_project.Facade;
 using hanbat_project.Strategy;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
-using System.Net;
 using System.Windows.Forms;
+using hanbat_project.Observer;
 
 namespace hanbat_project
 {
@@ -22,11 +20,7 @@ namespace hanbat_project
 
         private Point Pos;
 
-        public static Dictionary<String, List<CustomItem>> _dict = new Dictionary<string, List<CustomItem>>();
-
         public static MainForm main;
-
-        private String _classId;
 
         int currentPage = 0;
 
@@ -38,11 +32,11 @@ namespace hanbat_project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
             main = this;
 
             FacadeClass facade = new FacadeClass();
             facade.displayInfo();
+            facade.displayItems();
         }
 
         #endregion
@@ -117,11 +111,11 @@ namespace hanbat_project
         private void customListView2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
 
-            _classId = customListView2.FocusedItem.SubItems[5].Text;
+            String _classId = customListView2.FocusedItem.SubItems[5].Text;
 
             new displayClasses().getClassedList();
 
-            currentPage = _dict.Count - 1;
+            currentPage = displayClasses._dict.Count - 1;
 
         }
 
@@ -135,14 +129,14 @@ namespace hanbat_project
             {
                 currentPage--;
 
-                String _key = _dict.Keys.ToList()[currentPage];
+                String _key = displayClasses._dict.Keys.ToList()[currentPage];
 
                 label17.Text = _key.Split('\n')[0];
                 label15.Text = _key.Split('\n')[1].Trim();
 
                 flowLayoutPanel1.Controls.Clear();
 
-                foreach (CustomItem _item in _dict[_key])
+                foreach (CustomItem _item in displayClasses._dict[_key])
                 {
                     flowLayoutPanel1.Controls.Add(_item);
                 }
@@ -153,20 +147,20 @@ namespace hanbat_project
         {
 
             // 다음버튼
-            if (currentPage == _dict.Count - 1)
+            if (currentPage == displayClasses._dict.Count - 1)
                 MessageBox.Show("가장 최신 주차의 수업입니다.", "정보없음", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
                 currentPage++;
 
-                String _key = _dict.Keys.ToList()[currentPage];
+                String _key = displayClasses._dict.Keys.ToList()[currentPage];
 
                 label17.Text = _key.Split('\n')[0];
                 label15.Text = _key.Split('\n')[1].Trim();
 
                 flowLayoutPanel1.Controls.Clear();
 
-                foreach (CustomItem _item in _dict[_key])
+                foreach (CustomItem _item in displayClasses._dict[_key])
                 {
                     flowLayoutPanel1.Controls.Add(_item);
                 }
@@ -198,6 +192,10 @@ namespace hanbat_project
             new AssignmentForm(getAssignment._dict).ShowDialog();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new FacadeClass().displayItems();
+        }
     }
 
 }

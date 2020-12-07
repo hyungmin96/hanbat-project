@@ -60,6 +60,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.customFrame3 = new WindowsFormsApp2.CustomControl.customFrame();
+            this.label7 = new System.Windows.Forms.Label();
+            this.customRichTextBox2 = new aiswing_product.CustomControl.CustomRichTextBox();
             this.customTextbox1 = new WindowsFormsApp1.CustomControl.CustomTextbox();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -219,10 +221,10 @@
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button13.ForeColor = System.Drawing.Color.DarkGray;
             this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(1163, 8);
-            this.button13.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button13.Location = new System.Drawing.Point(1018, 6);
+            this.button13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(40, 34);
+            this.button13.Size = new System.Drawing.Size(35, 27);
             this.button13.TabIndex = 10494;
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button13.UseVisualStyleBackColor = false;
@@ -234,9 +236,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("페이북 Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(11, 14);
+            this.label1.Location = new System.Drawing.Point(10, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 24);
+            this.label1.Size = new System.Drawing.Size(115, 19);
             this.label1.TabIndex = 10491;
             this.label1.Text = "미제출 과제 확인";
             // 
@@ -253,11 +255,10 @@
             this.homePnl.Controls.Add(this.panel6);
             this.homePnl.Controls.Add(this.panel5);
             this.homePnl.Controls.Add(this.panel20);
-            this.homePnl.Location = new System.Drawing.Point(-1, 51);
-            this.homePnl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.homePnl.MinimumSize = new System.Drawing.Size(0, 62);
+            this.homePnl.Location = new System.Drawing.Point(-1, 41);
+            this.homePnl.MinimumSize = new System.Drawing.Size(0, 50);
             this.homePnl.Name = "homePnl";
-            this.homePnl.Size = new System.Drawing.Size(1208, 771);
+            this.homePnl.Size = new System.Drawing.Size(1057, 617);
             this.homePnl.TabIndex = 10496;
             // 
             // customFrame1
@@ -275,10 +276,9 @@
             this.customFrame1.Controls.Add(this.label3);
             this.customFrame1.Controls.Add(this.label6);
             this.customFrame1.FrameName = "customFrame";
-            this.customFrame1.Location = new System.Drawing.Point(610, 30);
-            this.customFrame1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customFrame1.Location = new System.Drawing.Point(534, 24);
             this.customFrame1.Name = "customFrame1";
-            this.customFrame1.Size = new System.Drawing.Size(573, 89);
+            this.customFrame1.Size = new System.Drawing.Size(501, 71);
             this.customFrame1.TabIndex = 10512;
             // 
             // button2
@@ -290,10 +290,9 @@
             this.button2.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button2.ForeColor = System.Drawing.Color.Gray;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(518, 22);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Location = new System.Drawing.Point(453, 18);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 35);
+            this.button2.Size = new System.Drawing.Size(28, 28);
             this.button2.TabIndex = 10508;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -302,9 +301,9 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.SteelBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(97, 58);
+            this.linkLabel1.Location = new System.Drawing.Point(85, 46);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(71, 15);
+            this.linkLabel1.Size = new System.Drawing.Size(61, 12);
             this.linkLabel1.TabIndex = 10511;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "linkLabel1";
@@ -315,9 +314,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(17, 18);
+            this.label3.Location = new System.Drawing.Point(15, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 19);
+            this.label3.Size = new System.Drawing.Size(29, 15);
             this.label3.TabIndex = 10510;
             this.label3.Text = "제목";
             // 
@@ -327,9 +326,9 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("페이북 Bold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(17, 58);
+            this.label6.Location = new System.Drawing.Point(15, 46);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 17);
+            this.label6.Size = new System.Drawing.Size(70, 13);
             this.label6.TabIndex = 10503;
             this.label6.Text = "업로드 파일 : ";
             // 
@@ -343,25 +342,46 @@
             this.customFrame3._usePnl = true;
             this.customFrame3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.customFrame3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
+            this.customFrame3.Controls.Add(this.label7);
+            this.customFrame3.Controls.Add(this.customRichTextBox2);
             this.customFrame3.Controls.Add(this.customTextbox1);
             this.customFrame3.Controls.Add(this.button1);
             this.customFrame3.Controls.Add(this.label5);
             this.customFrame3.FrameName = "customFrame";
-            this.customFrame3.Location = new System.Drawing.Point(610, 684);
-            this.customFrame3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customFrame3.Location = new System.Drawing.Point(534, 336);
             this.customFrame3.Name = "customFrame3";
-            this.customFrame3.Size = new System.Drawing.Size(573, 58);
+            this.customFrame3.Size = new System.Drawing.Size(501, 257);
             this.customFrame3.TabIndex = 10511;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(15, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 15);
+            this.label7.TabIndex = 10512;
+            this.label7.Text = "과제 설명 입력";
+            // 
+            // customRichTextBox2
+            // 
+            this.customRichTextBox2.Location = new System.Drawing.Point(22, 35);
+            this.customRichTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customRichTextBox2.Name = "customRichTextBox2";
+            this.customRichTextBox2.setValue = "";
+            this.customRichTextBox2.Size = new System.Drawing.Size(459, 172);
+            this.customRichTextBox2.TabIndex = 10510;
             // 
             // customTextbox1
             // 
             this.customTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
             this.customTextbox1.hint = "";
-            this.customTextbox1.Location = new System.Drawing.Point(95, 11);
+            this.customTextbox1.Location = new System.Drawing.Point(87, 220);
             this.customTextbox1.Margin = new System.Windows.Forms.Padding(0);
             this.customTextbox1.MultiLine = false;
             this.customTextbox1.Name = "customTextbox1";
-            this.customTextbox1.Size = new System.Drawing.Size(413, 31);
+            this.customTextbox1.Size = new System.Drawing.Size(361, 25);
             this.customTextbox1.TabIndex = 10507;
             this.customTextbox1.usePWchar = false;
             this.customTextbox1.val = "";
@@ -375,10 +395,9 @@
             this.button1.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button1.ForeColor = System.Drawing.Color.Gray;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(518, 9);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(457, 218);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 35);
+            this.button1.Size = new System.Drawing.Size(28, 28);
             this.button1.TabIndex = 10506;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -389,19 +408,19 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("페이북 Bold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(17, 20);
+            this.label5.Location = new System.Drawing.Point(19, 227);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 17);
+            this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 10503;
             this.label5.Text = "업로드 파일 : ";
             // 
             // customRichTextBox1
             // 
-            this.customRichTextBox1.Location = new System.Drawing.Point(610, 132);
-            this.customRichTextBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.customRichTextBox1.Location = new System.Drawing.Point(534, 106);
+            this.customRichTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customRichTextBox1.Name = "customRichTextBox1";
             this.customRichTextBox1.setValue = "";
-            this.customRichTextBox1.Size = new System.Drawing.Size(573, 535);
+            this.customRichTextBox1.Size = new System.Drawing.Size(501, 216);
             this.customRichTextBox1.TabIndex = 10509;
             // 
             // customFrame2
@@ -417,10 +436,9 @@
             this.customFrame2.Controls.Add(this.panel8);
             this.customFrame2.Controls.Add(this.customListView2);
             this.customFrame2.FrameName = "customFrame";
-            this.customFrame2.Location = new System.Drawing.Point(39, 30);
-            this.customFrame2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customFrame2.Location = new System.Drawing.Point(34, 24);
             this.customFrame2.Name = "customFrame2";
-            this.customFrame2.Size = new System.Drawing.Size(547, 715);
+            this.customFrame2.Size = new System.Drawing.Size(479, 572);
             this.customFrame2.TabIndex = 10508;
             // 
             // customComboBox1
@@ -434,12 +452,12 @@
             this.customComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customComboBox1.ForeColor = System.Drawing.Color.Gray;
             this.customComboBox1.FormattingEnabled = true;
-            this.customComboBox1.Location = new System.Drawing.Point(327, 22);
-            this.customComboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customComboBox1.Location = new System.Drawing.Point(286, 18);
             this.customComboBox1.Name = "customComboBox1";
-            this.customComboBox1.Size = new System.Drawing.Size(202, 23);
+            this.customComboBox1.Size = new System.Drawing.Size(177, 20);
             this.customComboBox1.TabIndex = 10514;
             this.customComboBox1.SelectionChangeCommitted += new System.EventHandler(this.customComboBox1_SelectionChangeCommitted);
+            this.customComboBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.customComboBox1_MouseClick);
             // 
             // panel8
             // 
@@ -448,10 +466,9 @@
             this.panel8.Controls.Add(this.label4);
             this.panel8.Controls.Add(this.label10);
             this.panel8.Controls.Add(this.panel13);
-            this.panel8.Location = new System.Drawing.Point(0, 74);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.Location = new System.Drawing.Point(0, 59);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(545, 40);
+            this.panel8.Size = new System.Drawing.Size(477, 32);
             this.panel8.TabIndex = 10423;
             // 
             // label2
@@ -459,9 +476,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(423, 11);
+            this.label2.Location = new System.Drawing.Point(370, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 19);
+            this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 10299;
             this.label2.Text = "제출기한";
             // 
@@ -470,9 +487,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(184, 11);
+            this.label4.Location = new System.Drawing.Point(161, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 19);
+            this.label4.Size = new System.Drawing.Size(76, 15);
             this.label4.TabIndex = 10297;
             this.label4.Text = "제출과제 제목";
             // 
@@ -481,9 +498,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(17, 11);
+            this.label10.Location = new System.Drawing.Point(15, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 19);
+            this.label10.Size = new System.Drawing.Size(29, 15);
             this.label10.TabIndex = 10298;
             this.label10.Text = "번호";
             // 
@@ -491,10 +508,9 @@
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(46)))), ((int)(((byte)(47)))));
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(0, 39);
-            this.panel13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel13.Location = new System.Drawing.Point(0, 31);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(545, 1);
+            this.panel13.Size = new System.Drawing.Size(477, 1);
             this.panel13.TabIndex = 10294;
             // 
             // customListView2
@@ -514,11 +530,10 @@
             this.customListView2.FullRowSelect = true;
             this.customListView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.customListView2.HideSelection = false;
-            this.customListView2.Location = new System.Drawing.Point(0, 106);
-            this.customListView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customListView2.Location = new System.Drawing.Point(0, 85);
             this.customListView2.Name = "customListView2";
             this.customListView2.RowHeight = 45;
-            this.customListView2.Size = new System.Drawing.Size(545, 605);
+            this.customListView2.Size = new System.Drawing.Size(477, 484);
             this.customListView2.TabIndex = 10512;
             this.customListView2.UseCompatibleStateImageBehavior = false;
             this.customListView2.View = System.Windows.Forms.View.Details;
@@ -560,19 +575,17 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(31)))));
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(1, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1207, 4);
+            this.panel6.Size = new System.Drawing.Size(1056, 3);
             this.panel6.TabIndex = 10501;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(1, 770);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel5.Location = new System.Drawing.Point(1, 616);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1207, 1);
+            this.panel5.Size = new System.Drawing.Size(1056, 1);
             this.panel5.TabIndex = 10500;
             // 
             // panel20
@@ -581,9 +594,8 @@
             this.panel20.Controls.Add(this.panel21);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1, 771);
+            this.panel20.Size = new System.Drawing.Size(1, 617);
             this.panel20.TabIndex = 10491;
             // 
             // panel21
@@ -591,7 +603,6 @@
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel21.Location = new System.Drawing.Point(0, 0);
-            this.panel21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(1, 2);
             this.panel21.TabIndex = 10300;
@@ -600,10 +611,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1205, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(1054, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 864);
+            this.panel4.Size = new System.Drawing.Size(1, 691);
             this.panel4.TabIndex = 10497;
             // 
             // panel1
@@ -611,19 +621,17 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 864);
+            this.panel1.Size = new System.Drawing.Size(1, 691);
             this.panel1.TabIndex = 10498;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(1, 863);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(1, 690);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1204, 1);
+            this.panel2.Size = new System.Drawing.Size(1053, 1);
             this.panel2.TabIndex = 10499;
             // 
             // panel3
@@ -631,17 +639,16 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(1, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1204, 1);
+            this.panel3.Size = new System.Drawing.Size(1053, 1);
             this.panel3.TabIndex = 10500;
             // 
             // AssignmentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(1206, 864);
+            this.ClientSize = new System.Drawing.Size(1055, 691);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -650,7 +657,6 @@
             this.Controls.Add(this.button13);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AssignmentForm";
             this.Text = "hanbat Class";
             this.Load += new System.EventHandler(this.AssignmentForm_Load);
@@ -724,9 +730,11 @@
         private WindowsFormsApp2.CustomControl.customFrame customFrame1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private FlattenCombo.CustomComboBox customComboBox1;
         private System.Windows.Forms.Button button2;
         public WindowsFormsApp1.CustomControl.CustomTextbox customTextbox1;
+        public aiswing_product.CustomControl.CustomRichTextBox customRichTextBox2;
+        private System.Windows.Forms.Label label7;
+        public FlattenCombo.CustomComboBox customComboBox1;
     }
 }
 

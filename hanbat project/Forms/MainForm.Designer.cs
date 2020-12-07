@@ -96,6 +96,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.homePnl.SuspendLayout();
             this.customFrame3.SuspendLayout();
             this.customFrame1.SuspendLayout();
@@ -503,6 +504,7 @@
             this.customFrame2._title = "수강중인 과목 목록";
             this.customFrame2._usePnl = false;
             this.customFrame2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
+            this.customFrame2.Controls.Add(this.button5);
             this.customFrame2.Controls.Add(this.panel8);
             this.customFrame2.Controls.Add(this.customListView2);
             this.customFrame2.FrameName = "customFrame";
@@ -746,6 +748,22 @@
             this.label6.TabIndex = 10503;
             this.label6.Text = "오늘 날짜 : 2020-12-02";
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(43)))));
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(43)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("페이북 Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button5.ForeColor = System.Drawing.Color.Gray;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(436, 14);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(28, 28);
+            this.button5.TabIndex = 10507;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -850,6 +868,7 @@
         public System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button5;
     }
 }
 

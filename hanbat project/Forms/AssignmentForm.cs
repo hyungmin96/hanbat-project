@@ -1,16 +1,14 @@
 ﻿using ExtendedControls;
 using hanbat_project.Class;
-using hanbat_project.CustomClass;
 using hanbat_project.dataClass;
-using hanbat_project.Facade;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Windows.Forms;
+using hanbat_project.Observer;
+using System.IO;
 
 namespace hanbat_project
 {
@@ -35,9 +33,7 @@ namespace hanbat_project
 
         private void AssignmentForm_Load(object sender, EventArgs e)
         {
-
-            customComboBox1.DataSource = _dict.Keys.ToArray();
-
+            assignmentForm = this;
         }
 
         #endregion
@@ -84,6 +80,8 @@ namespace hanbat_project
 
         private void button13_Click_1(object sender, EventArgs e)
         {
+            int _totalNum = 0;
+            MainForm.main.label8.Text = Facade.getAssignment._dict.Keys.ToArray().Sum(x => _totalNum += Facade.getAssignment._dict[x].Count).ToString() + "건";
             this.Close();
         }
 
@@ -115,7 +113,7 @@ namespace hanbat_project
             webClient.DownloadFile(url, linkLabel1.Text);
 
         }
-
+        
         private void customComboBox1_SelectionChangeCommitted(object sender, EventArgs e)
         {
             customListView2.Items.Clear();
@@ -138,7 +136,7 @@ namespace hanbat_project
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Title = "업로드 할 파일을 선택해주세요.";
-          
+
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 customTextbox1.val = ofd.FileName;
@@ -152,8 +150,38 @@ namespace hanbat_project
             String _courseId = _dict[customComboBox1.Text][customListView2.FocusedItem.Index]._courseId;
             String _reportId = _dict[customComboBox1.Text][customListView2.FocusedItem.Index]._reportUri;
 
-            new connectAssignment(_courseId, _reportId).Method();
+            Template.ExistFile existFile = null;
+            Template.noneFile noneFile = null;
+
+            if (File.Exists(customTextbox1.val))
+            {
+                existFile = new Template.ExistFile(_courseId, _reportId);
+                existFile.run();
+            }
+            else
+            {
+                noneFile = new Template.noneFile(_courseId, _reportId);
+                noneFile.run();
+            }
+
+            if((existFile != null && existFile._result) || (noneFile != null && noneFile._result))
+            {
+                o_concrete o = new o_concrete();
+
+                o.add(new o_dictionary(o, customComboBox1.Text, customListView2.FocusedItem.Index));
+
+                o.notify();
+
+                o.clear();
+            }
+
         }
+
+        private void customComboBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            customComboBox1.DataSource = _dict.Keys.ToArray();
+        }
+
     }
 
 }

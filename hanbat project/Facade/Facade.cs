@@ -20,9 +20,13 @@ namespace hanbat_project.Facade
 
         public void displayInfo()
         {
-            getclass.getClassList();
             getIdInfo.getInfo();
             GetDate.getDateMethod();
+        }
+
+        public void displayItems()
+        {
+            getclass.getClassList();
             getAssignment.getAssignmentList();
         }
 

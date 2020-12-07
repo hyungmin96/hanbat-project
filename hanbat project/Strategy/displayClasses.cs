@@ -14,10 +14,12 @@ namespace hanbat_project.Strategy
     public class displayClasses
     {
 
+        public static Dictionary<String, List<CustomItem>> _dict = new Dictionary<string, List<CustomItem>>();
+
         public void getClassedList()
         {
 
-            MainForm._dict.Clear();
+            _dict.Clear();
 
             String _classNum = MainForm.main.customListView2.FocusedItem.SubItems[5].Text;
 
@@ -39,7 +41,7 @@ namespace hanbat_project.Strategy
 
                     String _keyValue = Regex.Replace(Regex.Replace((_weekNum + "\n" + _deadline), "\t", String.Empty), "\r\n", String.Empty).Trim();
 
-                    MainForm._dict.Add(_keyValue, null);
+                    _dict.Add(_keyValue, null);
 
                     foreach (String _info in _date.Split(new String[] { "boxTable" }, StringSplitOptions.RemoveEmptyEntries))
                     {
@@ -84,7 +86,7 @@ namespace hanbat_project.Strategy
                         }
                     }
 
-                    MainForm._dict[_keyValue] = _lst;
+                    _dict[_keyValue] = _lst;
 
                 }
             }
@@ -100,14 +102,14 @@ namespace hanbat_project.Strategy
 
             MainForm.main.flowLayoutPanel1.Controls.Clear();
 
-            if (MainForm._dict.Count > 0)
+            if (_dict.Count > 0)
             {
-                String _key = MainForm._dict.Keys.ToList()[MainForm._dict.Count - 1];
+                String _key = _dict.Keys.ToList()[_dict.Count - 1];
 
                 MainForm.main.label17.Text = _key.Split('\n')[0];
                 MainForm.main.label15.Text = _key.Split('\n')[1].Trim();
 
-                foreach (CustomItem _item in MainForm._dict[_key])
+                foreach (CustomItem _item in _dict[_key])
                 {
                     MainForm.main.flowLayoutPanel1.Controls.Add(_item);
                 }

@@ -71,7 +71,7 @@ namespace hanbat_project.Facade
                 if (_dict[_item.SubItems[4].Text] == null || _dict[_item.SubItems[4].Text].Count < 1) 
                     _dict.Remove(_item.SubItems[4].Text);
 
-                MainForm.main.label8.Text = Convert.ToString(_number - 1) + "건";
+                MainForm.main.label8.Text = Convert.ToString(_number) + "건";
 
             }
 

@@ -68,9 +68,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\connectAssignment.cs" />
     <Compile Include="Class\Option.cs" />
-    <Compile Include="Class\uploadFile.cs" />
+    <Compile Include="Observer\Observer.cs" />
+    <Compile Include="Observer\o_Concrete.cs" />
+    <Compile Include="Observer\o_dictionary.cs" />
+    <Compile Include="Observer\o_method.cs" />
+    <Compile Include="Template\noneFile.cs" />
+    <Compile Include="Template\ExistFile.cs" />
     <Compile Include="dataClass\AssignmentData.cs" />
     <Compile Include="Facade\getAssignment.cs" />
     <Compile Include="Facade\getDate.cs" />
