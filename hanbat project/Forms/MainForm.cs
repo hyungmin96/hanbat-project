@@ -194,6 +194,8 @@ namespace hanbat_project
 
         private void button5_Click(object sender, EventArgs e)
         {
+            getAssignment._dict.Clear();
+            customListView2.Items.Clear();
             new FacadeClass().displayItems();
         }
     }

@@ -43,8 +43,6 @@ namespace hanbat_project.Template
             setPost setpost = new setPost();
             setpost.method(new setHttpProtocol(_uri, postData));
 
-
-
         }
 
         public virtual void up_or_none_File()
@@ -83,11 +81,12 @@ namespace hanbat_project.Template
 
             request.Method = "POST";
             request.ContentType = "multipart/form-data; boundary=---------------------------36932931913641";
+            //postReq.ContentType = "application/x-www-form-urlencoded";
             request.Referer = "http://cyber.hanbat.ac.kr/Report.do";
             request.Accept = "application/json, text/javascript, */*; q=0.01";
             request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36";
             request.ContentLength = formData.Length;
-            request.CookieContainer = Singleton.getInstance().getCookie();
+            request.CookieContainer = staticCookie.getInstance().getCookie();
 
             using (Stream requestStream = request.GetRequestStream())
             {

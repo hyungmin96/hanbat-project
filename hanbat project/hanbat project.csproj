@@ -94,8 +94,8 @@
       <DependentUpon>BoardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SingleTon\takeClass.cs" />
-    <Compile Include="SingleTon\s_Singleton.cs" />
-    <Compile Include="SingleTon\Singleton.cs" />
+    <Compile Include="SingleTon\staticSelenium.cs" />
+    <Compile Include="SingleTon\staticCookie.cs" />
     <Compile Include="CustomClass\CustomButton.cs">
       <SubType>UserControl</SubType>
     </Compile>

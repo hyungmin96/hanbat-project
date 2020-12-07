@@ -10,11 +10,18 @@ namespace hanbat_project.Template
     public class noneFile : ExistFile
     {
 
-        String courseId, reportId;
+        private String courseId, reportId;
 
         public bool _result;
 
         public noneFile(String courseId, String reportId) : base(courseId, reportId) { }
+
+        public new void run()
+        {
+            connectUri();
+            up_or_none_File();
+            submit();
+        }
 
         public override void up_or_none_File() { }
 

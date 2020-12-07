@@ -23,8 +23,6 @@ namespace hanbat_project.Observer
 
         public override void Update()
         {
-            Console.WriteLine(Facade.getAssignment._dict[_keyName][_index]._title + "과제를 제출하였습니다.");
-
             Facade.getAssignment._dict[_keyName].RemoveAt(_index);
         }
 

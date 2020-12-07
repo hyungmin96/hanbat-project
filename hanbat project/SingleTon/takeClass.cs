@@ -47,7 +47,7 @@ namespace hanbat_project.Class
             driver.Navigate().GoToUrl(_url);
 
             driver.Manage().Cookies.AddCookie(new OpenQA.Selenium.Cookie("RSN_JSESSIONID",
-                                                Regex.Split(Regex.Split(Singleton.getInstance().getCookie().GetCookieHeader(new Uri(_url)),
+                                                Regex.Split(Regex.Split(staticCookie.getInstance().getCookie().GetCookieHeader(new Uri(_url)),
                                                 "RSN_JSESSIONID=")[1], ";")[0]));
 
             driver.Navigate().Refresh();

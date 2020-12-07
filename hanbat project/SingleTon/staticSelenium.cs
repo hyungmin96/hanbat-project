@@ -5,12 +5,12 @@ using System.Text;
 
 namespace hanbat_project.Class
 {
-    public class s_Singleton
+    public class staticSelenium
     {
 
         public static takeClass Instance = null;
 
-        private s_Singleton() { }
+        private staticSelenium() { }
 
         public static takeClass getInstance()
         {

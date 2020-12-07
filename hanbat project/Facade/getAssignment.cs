@@ -43,6 +43,7 @@ namespace hanbat_project.Facade
 
                     String _value = Regex.Replace(_class.Trim(), "&nbsp;", String.Empty);
 
+                    //if (_value.Contains("javascript:submitReport"))
                     if (_value.Contains("javascript:submitReport") && (_value.Contains("[진행중]") && !_value.Contains("제출완료")))
                     {
 
@@ -62,7 +63,7 @@ namespace hanbat_project.Facade
 
                         _dict[_item.SubItems[4].Text] = _lst;
 
-                        _number += _lst.Count;
+                        _number += 1;
 
                     }
 

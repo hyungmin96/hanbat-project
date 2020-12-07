@@ -5,19 +5,19 @@ using System.Text;
 
 namespace hanbat_project.Class
 {
-    public class Singleton
+    public class staticCookie
     {
 
-        public static Singleton Instance = null;
+        public static staticCookie Instance = null;
 
         public static CookieContainer _container = new CookieContainer();
         
-        private Singleton() { }
+        private staticCookie() { }
 
-        public static Singleton getInstance()
+        public static staticCookie getInstance()
         {
             if (Instance == null)
-                Instance = new Singleton();
+                Instance = new staticCookie();
 
             return Instance;
         }

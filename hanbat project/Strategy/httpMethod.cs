@@ -64,7 +64,7 @@ namespace hanbat_project.Strategy
             postReq.Referer = "http://cyber.hanbat.ac.kr/Report.do";
             postReq.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9";
             postReq.ContentLength = byteData.Length;
-            postReq.CookieContainer = Singleton.getInstance().getCookie();
+            postReq.CookieContainer = staticCookie.getInstance().getCookie();
 
             if (_method == "POST" || _method == "post")
             {
@@ -74,7 +74,7 @@ namespace hanbat_project.Strategy
                 }
             }
 
-            Singleton.getInstance().setCookie(postReq.CookieContainer);
+            staticCookie.getInstance().setCookie(postReq.CookieContainer);
 
             HttpWebResponse response = (HttpWebResponse)postReq.GetResponse();
             using (StreamReader sr = new StreamReader(response.GetResponseStream()))

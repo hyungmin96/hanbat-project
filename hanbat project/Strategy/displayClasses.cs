@@ -1,13 +1,9 @@
-﻿using hanbat_project.Class;
-using hanbat_project.CustomClass;
+﻿using hanbat_project.CustomClass;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using hanbat_project.Strategy;
 
 namespace hanbat_project.Strategy
 {

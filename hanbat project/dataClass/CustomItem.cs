@@ -45,7 +45,7 @@ namespace hanbat_project.CustomClass
 
         private void button3_Click(object sender, EventArgs e)
         {
-            s_Singleton.getInstance().openChrome(uri, classId);
+            staticSelenium.getInstance().openChrome(uri, classId);
         }
 
         public String _curTime
